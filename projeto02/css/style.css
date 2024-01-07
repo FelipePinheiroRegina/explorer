@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #7D7987;
+    min-height: 100vh;
+
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0) 82.08%, rgba(196, 252, 238, 0.38) 100%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 1005px;
+    margin: auto;
+    padding-top: 65px;
+
+    font-family: 'Mulish', sans-serif;
+    font-size: 18px;
+}
+
+nav img {
+    width: 102px;
+    height: 22px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1F1534;
+    opacity: 0,5;
+}
+
+nav a:hover {
+    font-weight: bold;
+    opacity: 1;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    width: 1000px;
+    height: 430px;
+    margin: 100px auto 0;
+}
+
+section .left {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    
+    width: 492px;
+    height: 400px;
+}
+
+section h1 {
+    width: 490px;
+    height: 112px;
+    font-size: 49px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: normal;
+    color: black;
+}
+
+section p {
+    line-height: 28px;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 180px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 32px 15px 32px 14px;
+    
+    
+    background-color: #69B99D;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #1da374;
+}
+
+
+section .jump{
+    width: 415px;
+    height: 430px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    margin: 80px auto 0px;
+    padding-bottom: 40px;
+    width: 592px;
+    height: 28px;
+    color: black;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.balls {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
