@@ -23,6 +23,15 @@ Projeto 02!
 
 [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/projeto02)
 
-<a href="https://felipepinheiroregina.github.io/explorer/projeto02/html/" target="_blank">Projeto no Ar!</a>
+<a href="https://felipepinheiroregina.github.io/explorer/projeto-rocket/html/" target="_blank">Projeto no Ar!</a>
 
 <img src="https://github.com/FelipePinheiroRegina/explorer/assets/113048688/bfa67081-9904-4d92-9acd-3a722bb03e31" width="700px"/>
+
+---
+Projeto Rocket Sect!
+
+[Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/projeto-rocket)
+
+<a href="https://felipepinheiroregina.github.io/explorer/projeto-rocket/html/index" target="_blank">Projeto no Ar!</a>
+
+<img src="https://github.com/FelipePinheiroRegina/explorer/assets/113048688/4f499ff1-4fb0-4002-84fb-4dd7f3c53c8c" width="700px"/>
