@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 01</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #E5E5E5;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            
+            width: 100vw;
+            height: 368px;
+
+            background-color: #121214;
+        }
+
+        .title {
+            width: 736px;
+            margin: auto;
+        }
+
+        header {
+            width: 319px;
+            height: 160px;
+
+            padding-top: 80px;
+
+        }
+
+        header h1 {
+            color: #FFFFFF;
+            font-family: 'Archivo', sans-serif;
+            font-size: 36px;
+            line-height: 42px;
+        }
+
+        header p {
+            color: #42D3FF;
+            font-size: 16px;
+            line-height: 26px;
+            
+            margin-top: 35px;
+        }
+
+        main {
+            width: 736px;
+            height: 1430px;
+
+            margin: 45px auto 0px;
+            background-color: #FAFAFC;
+            border-radius: 8px;
+        }
+
+        form {
+            padding: 64px;
+        }
+
+        form fieldset {
+            border: none;
+        }
+
+        legend{
+            font-family: 'Archivo', sans-serif;
+            font-weight: 600;
+            font-size: 28px;
+            border-bottom: 3px solid #E6E6F0;
+            width: 100%;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+       .campos {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+       }
+
+       fieldset input{
+            height: 56px;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <header>
+            <h1>
+                Crie e compartilhe
+                seu evento.
+            </h1>
+            <p>
+                O primeiro passo, é preencher esse formulário de inscrição.
+            </p>
+        </header>
+    </div>
+    <main>
+        <form action="" method="get">
+            <fieldset>
+                <legend>Informações do Evento</legend>
+
+                <div class="campos">
+                    <label for="titulo-evento">Título do evento (mínimo 8 caracteres)</label>
+                    <input type="text" name="titulo-evento" id="titulo-evento">
+
+                    <label for="ola">ola</label>
+                    <input type="email" name="ola" id="ola">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
