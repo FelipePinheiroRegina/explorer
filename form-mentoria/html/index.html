@@ -42,6 +42,7 @@
         div.header > header > h1{
             font-family: 'Staatliches', sans-serif;
             font-size: 48px;
+            font-weight: normal;
             color: #FFFFFF;
 
             padding-bottom: 35px;
@@ -56,14 +57,120 @@
 
         main {
             width: 750px;
-            height: 1000px;
+            height: 1210px;
             background-color: #FFFFFF;
-            border-radius: 8px;
+            border-radius: 8px 8px 0px 0px;
         }
 
         form {
             padding: 64px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
+
+        fieldset {
+            border: none;
+        }
+        
+        legend {
+            width: 100%;
+            border-bottom: 1px solid #E6E6F0;
+            color: #535971;
+            font-family: 'Staatliches', sans-serif;
+            font-size: 24px;
+            
+            padding-bottom: 25px;
+            margin-bottom: 50px;
+        }
+
+        fieldset h2 {
+            color: #535971;
+            font-family: 'Staatliches', sans-serif;
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .padrao {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .padrao input{
+            height: 56px;
+            padding: 8px;
+            
+            border: 1px solid #E6E6F0;
+            background-color: #FAFAFC;
+            border-radius: 8px;
+        }
+
+        .padrao label {
+            font-size: 14px;
+            color: #4E4958;
+        }
+
+        .padrao label span {
+            font-size: 12px;
+            color: #C1BCCC;
+        }
+
+        .name-lastname {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .first-name, .last-name{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .eixo-x {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+
+            margin-bottom: 30px;
+        }
+
+        .eixo-y {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .eixo-x > div:nth-child(1) {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .eixo-x > div {
+            width: 25%;
+        }
+
+        footer {
+            width: 750px;
+            height: 160px;
+
+            background-color: #535971;
+            border-radius: 0px 0px 8px 8px;
+            padding: 50px 64px;
+            margin-bottom: 100px;
+            
+        }
+
+        footer input {
+            width: 100%;
+            height: 55px;
+            
+        }
+       
     </style>
 </head>
     
@@ -79,14 +186,105 @@
                 </p>
             </header>
             <main>
-                <form action="" method="get">
+                <form id="my-form" action="" method="get">
                     <fieldset>
                         <legend>
                             INFORMAÇÕES PESSOAIS
                         </legend>
+
+                        <div class="padrao">
+                            <div class="name-lastname">
+                                <div class="first-name">
+                                    <label for="name">Nome</label>
+                                    <input type="text" name="name" id="name">
+                                </div>
+                                <div class="last-name">
+                                    <label for="last-name">Sobrenome</label>
+                                    <input type="text" name="last-name" id="last-name">
+                                </div>
+                            </div>
+
+                            <div class="padrao">
+                                <label for="email">Email <span>(digite um email válido)</span></label>
+                                <input type="email" name="email" id="email">
+                            </div>
+
+                            <div class="padrao">
+                                <label for="password">Senha <span>(mínimo de 6 caracteres)</span></label>
+                                <input type="password" name="password" id="password">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            INFORMAÇÕES DO MENTOR
+                        </legend>
+                        
+                        <div class="padrao">
+                            <label for="n-mentor">Nome do seu mentor <span>(só o primeiro nome)</span></label>
+                            <input type="text" name="n-mentor" id="n-mentor">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>
+                            SEUS HORÁRIOS DISPONÍVEIS
+                        </legend>
+                        
+                        <h2>
+                            PRIMEIRA MENTORIA
+                        </h2>
+                        
+                        <div class="padrao">
+                            <div class="eixo-x">
+                                <div class="eixo-y">
+                                    <label for="date01">Data <span>(DD/MM/AAAA)</span></label>
+                                    <input type="date" name="data01" id="data01">
+                                </div>
+                            
+                                <div class="eixo-y">
+                                    <label for="hora-i">Das</label>
+                                    <input type="time" name="hora-i" id="hora-i">
+                                </div>
+                                <div class="eixo-y">
+                                    <label for="hora-f">Até</label>
+                                    <input type="time" name="hora-f" id="hora-f">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2>
+                            SEGUNDA MENTORIA
+                        </h2>
+
+                        <div class="padrao">
+                            <div class="eixo-x">
+                                <div class="eixo-y">
+                                    <label for="date02">Data <span>(DD/MM/AAAA)</span></label>
+                                    <input type="date" name="data02" id="data02">
+                                </div>
+                            
+                                <div class="eixo-y">
+                                    <label for="hora-i2">Das</label>
+                                    <input type="time" name="hora-i2" id="hora-i2">
+                                </div>
+                                <div class="eixo-y">
+                                    <label for="hora-f2">Até</label>
+                                    <input type="time" name="hora-f2" id="hora-f2">
+                                </div>
+                            </div>
+                        </div>
                     </fieldset>
                 </form>
             </main>
+            <footer>
+                <input 
+                    type="submit" 
+                    form="my-form"
+                    value="SALVAR"
+                />
+            </footer>
         </div>
     </body>
 
