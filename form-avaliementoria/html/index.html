@@ -8,62 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avalie</title>
 
+    <link rel="stylesheet" href="../css/style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Staatliches&display=swap" rel="stylesheet">
-
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        header {
-            background-color: #293241;
-            height: 465px;
-            text-align: center;
-        }
-
-        header > h1 {
-            padding-top: 100px;
-
-            font-family: 'Staatliches', sans-serif;
-            font-weight: normal;
-            font-size: 36px;
-            color: #FFFFFF;
-        }
-
-        header > p {
-            font-family: 'Poppins', sans-serif;
-            font-weight: normal;
-            font-size: 16px;
-            color: #FFFFFF;
-        }
-
-        header > img {
-            padding-top: 25px;
-        }
-
-        header div.head-form {
-            width: 750px;
-            height: 130px;
-
-            position: relative;
-            top: 7.7%;
-
-            margin: auto;
-            border-radius: 20px 20px 0px 0px;
-
-            font-family: 'Staatliches', sans-serif;
-            font-weight: normal;
-            font-size: 24px;
-            background-color: #F67669;
-            color: #FFFFFF;
-        }
-
-        header div.head-form > p {
-            padding-top: 7.7%;
-        }
-    </style>
 </head>
     <body>
         <header>
@@ -81,16 +28,80 @@
         <main>
             <form action="">
                 <fieldset>
-                    <legend></legend>
+                   
+                    <div class="padrao">
+                        <div class="row">
+                            <div class="column">
+                                <label for="name">Nome</label>
+                                <input type="text" name="name" id="idname" required>
+                            </div>
+
+                            <div class="column">
+                                <label for="lastname">Sobrenome</label>
+                                <input type="text" name="lastname" id="idlastname">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="padrao">
+                        <label for="mail">Email <span>(digite um email válido)</span></label>
+                        <input type="email" name="mail" id="idmail">
+                    </div>
                 </fieldset>
 
                 <fieldset>
-                    <legend></legend>
+                    <legend>informações do mentor</legend>
+
+                    <div class="padrao">
+                        <label for="mentor">Selecione quem foi o seu mentor</label>
+                        <select name="mentor" id="idmentor">
+                            <option value="mayk">Mayk Brito</option>
+                            <option value="diego">Diego</option>
+                            <option value="gustavo">Gustavo Guanabara</option>
+                            <option value="hello">Hello World</option>
+                        </select>
+                    </div>
+
+                    <div class="padrao">
+                        <label for="feed">Feedback sobre o mentor</label>
+                        <textarea name="feed" id="idfeed">
+                            
+                        </textarea>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" name="check" id="idcheck">
+                        <label for="check">Todas as minhas dúvidas foram esclarecidas durante a mentoria.</label>
+                    </div>
+                   
                 </fieldset>
 
                 <fieldset>
-                    <legend></legend>
+                    <legend>Agendando próxima mentoria</legend>
+
+                    <div class="padrao">
+                        <div class="row-date">
+                            <div class="column-date">
+                                <label for="date">Data <span>(DD/MM/AAAA)</span></label>
+                                <input type="date" name="date" id="idate">
+                            </div>
+
+                            <div class="column-date">
+                                <label for="horas-i">Das</label>
+                                <input type="time" name="horas-i" id="idhoras-i">
+                            </div>
+
+                            <div class="column-date">
+                                <label for="horas-f">Até</label>
+                                <input type="time" name="horas-f" id="idhoras-f">
+                            </div>
+                        </div>
+                    </div>
                 </fieldset>
+
+                <div class="button">
+                    <input type="submit" value="Salvar">
+                </div>
             </form>
 
         </main>
