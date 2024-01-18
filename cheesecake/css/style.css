@@ -1,0 +1,82 @@
+@chartset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    
+    max-width: 39.3rem;
+    font-size: 1.4rem;
+
+    padding: 5.5rem 4.0rem;
+    margin-inline: auto;
+    
+    font-family: 'Source Serif 4', serif;
+    color: #A54328;
+}
+
+main h1 {
+    font-size: 2.8rem;
+}
+
+main > div.content > img {
+    padding: 4.5rem 0rem 4.5rem 0rem;
+    width: 100%;
+}
+
+main > div.recipe > h1 {
+    padding-bottom: 3.5rem;
+}
+
+main > div.recipe ul, ol {
+    margin-bottom: 2.0rem;
+    margin-left: 2.5rem;
+}
+
+button {
+    width: 9.4rem;
+    height: 3.1rem;
+    border-radius: .5rem;
+
+    font-weight: 500;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #A54328;
+    border: none;
+}
+
+@media (min-width: 1150px) {
+    body {
+        background-image: url(../image/body.png);
+    }
+
+    main {
+        max-width: fit-content;
+        flex-direction: row;
+        gap: 20rem;
+
+        font-size: 2.0rem;
+    }
+
+    main div h1 {
+        font-size: 4.0rem;
+    }
+
+    main div.content {
+        max-width: 43.5rem;
+    }
+
+    main div.recipe {
+        max-width: 52.5rem;
+    }
+}
