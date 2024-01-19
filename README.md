@@ -55,6 +55,15 @@ Formulário 01 | Mentoria | Avaliar mentoria
 
 - [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/mobile-first)
 - [Projeto no AR!](https://felipepinheiroregina.github.io/explorer/mobile-first/html/)
-  
 
+---
+# Cheesecake
+## Mobile 📱
+<img src="https://github.com/FelipePinheiroRegina/explorer/assets/113048688/c8f80fcd-afc7-4e66-800d-c4457b3f138a"/>
+
+# Desktop 🖥️
+<img src="https://github.com/FelipePinheiroRegina/explorer/assets/113048688/b8c9d433-a057-4534-b1ee-6030839cbfa1"/>
+
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/cheesecake)
+- [Projeto no AR!](https://felipepinheiroregina.github.io/explorer/cheesecake/html/)
 
