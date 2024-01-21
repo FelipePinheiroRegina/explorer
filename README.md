@@ -67,3 +67,11 @@ Formulário 01 | Mentoria | Avaliar mentoria
 - [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/cheesecake)
 - [Projeto no AR!](https://felipepinheiroregina.github.io/explorer/cheesecake/html/)
 
+---
+# Galáxias
+## Projeto utilizando Grid CSS
+<img src="https://github.com/FelipePinheiroRegina/explorer/assets/113048688/093d4836-540b-4dbf-b78d-f29f45abacb4"/>
+
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/galaxias)
+- [Projeto no AR!](https://felipepinheiroregina.github.io/explorer/galaxias/html/)
+
