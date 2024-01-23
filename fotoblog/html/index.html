@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto Blog</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 62.5%;
+
+            --color-base-white: #ffffff;
+            --color-base-gray-100: #f5f5f5;
+            --color-base-gray-300: #8d8d99;
+            --color-base-gray-500: #3D3D3D;
+            --color-base-gray-900: #202024;
+        }
+
+        html, body, input {
+            font-family: 'Mulish', sans-serif;
+        }
+
+        body {
+            font-size: 1.6rem;
+            background-color: var(--color-base-white);
+            color: var(--color-base-gray-900);
+        }
+
+        #app {
+            height: 100vh;
+            
+            display: grid;
+            grid-template-rows: max-content 1fr max-content;
+        }
+
+        .container {
+            padding: 1.6rem 3.2rem;
+            width: min(112rem, 100%);
+            margin: 0 auto;
+        }
+
+        header nav,
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 7.2rem;
+
+            color: var(--color-base-gray-300);
+        }   
+
+        header nav ul {
+            list-style: none;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        header nav ul li.active {
+            color: var(--color-base-gray-900);
+        }
+
+        header nav form {
+            flex: 1;
+            font-weight: 600;
+        }
+
+        header nav form div.wappr label {
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        header nav form div.wappr input {
+            width: 100%;
+            padding: 1.6rem;
+            
+            font-size: 1.6rem;
+            font-weight: 600;
+
+            border: none;
+            background-color: var(--color-base-gray-100);
+
+            border-radius: .5rem;
+            opacity: 0.56;
+        }
+
+        header nav form div.wappr input::placeholder {
+            color: var(--color-base-gray-500);
+        }
+
+        header nav #avatar {
+            width: 4.2rem;
+            height: 4.2rem;
+
+            border-radius: 50%;
+        }
+
+        main {
+            background-color: var(--color-base-gray-100);
+            overflow-y: scroll;
+        }
+
+        footer p {
+            text-align: center;
+            font-weight: 600;
+            color: #323238;
+
+            padding: 1.6rem;
+        }
+
+    </style>
+</head>
+    <body>
+        <div id="app">
+            <header class="container">
+                <nav>
+                    <img id="logo" src="../images/camera.svg" alt="Imagem da logomarca">
+                    <ul>
+                        <li>Home</li>
+                        <li class="active">Galeria</li>
+                    </ul>
+                    
+                    <form>
+                        <div class="wappr">
+                            <label for="search">Pesquise por imagens e coleções</label>
+                            <input type="text" name="search" id="idsearch" placeholder="Pesquise por imagens e coleções">
+                        </div>
+                    </form>
+                    
+                    <img id="avatar" src="https://randomuser.me/api/portraits/women/5.jpg" alt="Avatar">
+                </nav>
+            </header>
+            
+            <main>
+                <div class="container">
+                    <h1>Galeria</h1>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/eletrica.png" alt="Workspace elétrica">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Workspace elétirca</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/dark-red.png" alt="Dark and red">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Dark and red</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/grids.png" alt="Organização e grids">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Organização e grids</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/colmeia.png" alt="Colméia">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Colméia</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/escritor.png" alt="Setup de escritor">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Setup de escritor</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/ergonomica.png" alt="Ergonomia e cores">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Ergonomia e cores</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/luzes.png" alt="Show de luzes">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Show de luzes</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/purple.png" alt="Deep purple">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Deep purple</h2>
+                        </figcaption>
+                    </section>
+
+                    <section class="gallery">
+                        <figure class="item">
+                            <img src="../images/screen.png" alt="Mult-Screen">
+                        </figure>
+
+                        <figcaption class="details">
+                            <h2>Mult-Screen</h2>
+                        </figcaption>
+                    </section>
+                </div>
+            </main>
+            
+            <footer class="container">
+                <p>&copy; 2023 - Rocketseat Explorer</p>
+            </footer>
+        </div>
+    </body>
+</html>
