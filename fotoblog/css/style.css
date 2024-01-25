@@ -171,24 +171,87 @@ footer p {
     padding: 1.6rem;
 }
 
+header {
+    --startY: -100%;
+
+    animation: move 1s;
+}
+
+footer {
+    --startY: 100%;
+
+    animation: move 1s;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(var(--startY));
+    }
+}
+
+.item {
+    --delay: .4s;
+    animation: appear .4s var(--delay) backwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* ANIMAÇÃO 
+
 .quadrado {
     width: 4.4rem;
     height: 4.4rem;
     background-color: black;
 
-    animation-name: move;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
+    animation-name: move, blink;
+    animation-duration: 1s, 50ms;
+    animation-fill-mode: forwards;
+
+    animation-direction: reverse; 
+    animation-delay: 2s; 
+    animation-direction: alternate;
+    Animation-iteration-count: 2; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    animation-timing-function: steps(11);
+
+    animation: move 1s forwards alternate infinite linear, blink 50ms infinite;
+   
+}
+
+.quadrado:hover {
+    animation-play-state: paused;
 }
 
 @keyframes move {
-    /* from */
+    from 
     0% {
 
     }
 
-    /* to */
+    to 
     100% {
         transform: translateX(calc(100vw - 100% - 16px));
     }
 }
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+}
+
+*/
