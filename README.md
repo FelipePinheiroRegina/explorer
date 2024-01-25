@@ -75,3 +75,11 @@ Formulário 01 | Mentoria | Avaliar mentoria
 - [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/galaxias)
 - [Projeto no AR!](https://felipepinheiroregina.github.io/explorer/galaxias/html/)
 
+
+---
+# Foto Blog
+Projeto utilizando grid, css animation. Confira as animações no ar!
+- [Clique aqui](https://felipepinheiroregina.github.io/explorer/fotoblog/html/)
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/fotoblog)
+
+![projeto-fotoblog](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/db3f99ba-ec0f-417b-ac0d-25acf0e4d181)
