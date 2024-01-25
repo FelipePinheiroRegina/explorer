@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+#container-p > * {
+    border: 1px solid red;
+}
+
+#container-p {
+    height: 100vh;
+    display: grid;
+
+    grid-template-areas: 
+    "H H H H"
+    "M M M A"
+    "F F F F";
+}
+
+header {
+   grid-area: H; 
+   height: max-content;
+}
+
+main {
+    grid-area: M;
+    height: 100vh;
+}
+
+footer {
+    grid-area: F;
+    height: max-content;
+    text-align: center;
+    padding: 2.4rem;
+}
