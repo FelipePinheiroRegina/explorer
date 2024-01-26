@@ -64,6 +64,15 @@ header > nav {
 }
 
 /* MAIN */
+#content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    line-height: 3rem;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
 
 #img-title {
     border-radius: 0px 0px 0px 5px;
@@ -77,10 +86,30 @@ aside {
 
 #content h1{
     padding-top: 4rem;
+    padding-bottom: 1rem;
     font-size: 2.4rem;
 }
 
-#content {
-    font-size: 1.6rem;
+#button {
+    display: flex;
+    width: 9.2rem;
+    height: 4.0rem;
+    gap: 1.2rem;
 }
+
+.likes {
+    display: grid;
+    place-content: center;
+    background-color: #065E7C;
+    width: 4rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+
+
+
 
