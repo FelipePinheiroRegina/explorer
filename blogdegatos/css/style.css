@@ -10,24 +10,25 @@
     font-size: 62.5%;
 
     --color-title: #065E7C;
+    --color-white: #FFFFFF;
+    --color-rodape: #387E96;
+    --color-placeholder: #ffffff21;
 }
 
 #container-p {
-    display: grid;
-    grid-template-columns: repeat(1, 43.2rem);
-    justify-content: center;
+    margin: auto;
 }
 
 /* HEADER */
-
 header > nav {
     background-color: var(--color-title);
     padding: 1.2rem 2.8rem;
     
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2.6rem;
+    gap: 1.2rem;
 }
 
 #procurar label {
@@ -42,15 +43,15 @@ header > nav {
     font-weight: 600;
     font-size: 1.6rem;
     padding-left: 1rem;
-    color: #FFFFFF;
-    background-color: #ffffff21;
+    color: var(--color-white);
+    background-color: var(--color-placeholder);
     height: 4.2rem;
     border-radius: 4px;
     border: none;
 }
 
 #procurar input::placeholder {
-    color: #FFFFFF;
+    color: var(--color-white);
     font-family: 'Mulish', sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
@@ -64,24 +65,30 @@ header > nav {
 }
 
 /* MAIN */
+main,
+aside {
+    font-family: 'Mulish', sans-serif;
+    max-width: 43rem;
+    font-size: 1.6rem;
+
+    padding: 0rem 2.2rem;
+}
+
 #content {
     display: grid;
     grid-template-columns: 1fr;
     gap: 3rem;
 
+    
     line-height: 3rem;
     font-size: 1.6rem;
     margin-bottom: 3rem;
 }
 
 #img-title {
+    width: 100%;
+    object-fit: cover;
     border-radius: 0px 0px 0px 5px;
-}
-
-#content,
-aside {
-    font-family: 'Mulish', sans-serif;
-    padding: 0rem 2.2rem;
 }
 
 #content h1{
@@ -100,11 +107,56 @@ aside {
 .likes {
     display: grid;
     place-content: center;
-    background-color: #065E7C;
+    background-color: var(--color-title);
     width: 4rem;
     border-radius: 50%;
     text-align: center;
     cursor: pointer;
+}
+
+/* ASIDE */
+
+aside {
+    display: grid;
+    grid-template-columns: 1;
+    row-gap: 3.2rem;
+
+    margin-bottom: 4rem;
+}
+
+aside > h2 {
+    font-size: 2.4rem;
+}
+
+.rel-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.text > h3 {
+    font-size: 1.6rem;
+}
+
+.text > p {
+    font-size: 1.4rem;
+}
+
+/* FOOTER */
+
+footer {
+    display: grid;
+    place-content: center;
+
+    background-color: var(--color-rodape);
+    height: 6.4rem;
+}
+
+footer > p {
+    font-family: 'Mulish', sans-serif;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
 
