@@ -17,6 +17,7 @@
 
 #container-p {
     margin: auto;
+    max-width: 80rem;
 }
 
 /* HEADER */
