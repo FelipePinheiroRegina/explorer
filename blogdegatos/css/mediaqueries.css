@@ -1,0 +1,61 @@
+@chartset "UTF-8";
+
+@media screen and (min-width: 768px) {
+    
+
+    #container-p {
+        display: grid;
+        max-width: 100%;
+        
+        row-gap: 4rem;
+        place-content: center;
+    }
+
+    header {
+        display: grid;
+
+        grid-column: 1/4;
+        margin: 0;
+        max-width: 100%;
+    }
+
+    header > nav {
+        display: flex;
+        padding: 1.2rem 12rem;
+        gap: 3rem;
+    }
+
+    #procurar {
+        flex: 1;
+        
+    }
+
+    #procurar input {
+        width: 100%;
+    }
+
+    main {
+        display: grid;
+        grid-row: 2/3;
+        grid-column: 1/3;
+        
+        max-width: 80rem;
+    }
+
+    aside {
+        display: grid;
+        grid-column: 3/4;
+        
+
+        max-width: 39.0rem;
+    }
+
+    footer {
+        display: grid;
+        grid-column: 1/4;
+    }
+
+    
+
+  
+}

@@ -17,13 +17,19 @@
 
 #container-p {
     margin: auto;
-    max-width: 80rem;
+    max-width: 43rem;
 }
 
 /* HEADER */
+header {
+    max-width: 43rem;
+    margin: auto;
+}
+
 header > nav {
     background-color: var(--color-title);
     padding: 1.2rem 2.8rem;
+    width: 100%;
     
     
     display: flex;
@@ -72,7 +78,7 @@ aside {
     max-width: 43rem;
     font-size: 1.6rem;
 
-    padding: 0rem 2.2rem;
+   
 }
 
 #content {
@@ -80,7 +86,7 @@ aside {
     grid-template-columns: 1fr;
     gap: 3rem;
 
-    
+    padding: 0rem 2.2rem;
     line-height: 3rem;
     font-size: 1.6rem;
     margin-bottom: 3rem;
@@ -88,7 +94,6 @@ aside {
 
 #img-title {
     width: 100%;
-    object-fit: cover;
     border-radius: 0px 0px 0px 5px;
 }
 
@@ -123,6 +128,7 @@ aside {
     row-gap: 3.2rem;
 
     margin-bottom: 4rem;
+    padding: 0rem 2.2rem;
 }
 
 aside > h2 {
@@ -151,6 +157,7 @@ footer {
 
     background-color: var(--color-rodape);
     height: 6.4rem;
+    width: 100%;
 }
 
 footer > p {
