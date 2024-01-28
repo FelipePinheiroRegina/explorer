@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Gatos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 62.5%;
+        }
+
+        #app {
+            height: 100vh;
+            font-size: 1.6rem;
+
+            display: grid;
+            grid-template-rows: max-content 1fr max-content;
+            
+        }
+
+        .container {
+            width: min(43.0rem, 100%);
+            margin: 0 auto;
+            
+        }
+
+        .container > p, aside {
+            padding: 1.6rem 3.2rem;
+        }
+
+        main {
+            width: min(43.0rem, 100%);
+            margin: 0 auto;
+        }
+
+        #image-main {
+            
+            padding: 0;
+            height: 21.9rem;
+            width: min(43.0rem, 100%);
+            margin: 0 auto;
+        }
+
+        #image-main img{
+           
+            width: 100%;
+            height: 100%; 
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            padding: 0;
+            
+        }
+
+        /* DESKTOP */
+
+        @media screen and (min-width: 768px) {
+            .container {
+                width: min(112rem, 100%);
+            }
+
+            body {
+                background-color: #065E7C;
+            }
+
+            main {
+                background-color: #F4FCFF;
+                overflow-y: scroll; 
+                width: 100%; 
+            }
+
+            .relacionados {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+
+                width: 38.4rem;
+            }
+
+            .item {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                align-items: flex-start;
+                justify-content: space-between;
+            }
+
+            .item img {
+                aspect-ratio: 16/9;
+                object-fit: cover;
+                width: 100%;
+            }
+
+            header, footer {
+                
+                height: 5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header class="container">
+            header
+        </header>
+
+        <main>
+            <div class="container">
+                <div id="image-main">
+                    <img src="https://source.unsplash.com/random?cat" alt="image cat">
+                </div>
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem saepe quis veritatis! Molestiae blanditiis amet suscipit quidem ipsum numquam dolor, animi hic debitis voluptatem eos. Vero quidem dolor itaque facilis?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis adipisci voluptate quod, voluptates vel libero illo, quia non doloribus earum, velit itaque culpa similique! Laboriosam unde rem voluptatem sunt dolores.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem dolores reprehenderit sint quo quos unde, laboriosam quasi aut error, omnis, consequuntur eum rerum. Sed accusamus rerum voluptatem quas nisi velit!
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit delectus rem quisquam eaque asperiores fugiat commodi explicabo praesentium corporis, numquam aut. Rerum ex aperiam vero perferendis saepe ipsum magnam corrupti!
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus vel aut eaque, dicta accusantium corrupti velit explicabo deleniti natus, laborum, nostrum repudiandae facilis voluptatem rerum doloremque corporis ratione beatae odio?
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum, atque autem dicta aliquid ipsam ullam error excepturi. At quam explicabo ullam velit sed obcaecati dolorem quae deleniti natus. Debitis, veniam.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nemo fugiat temporibus repellat sequi. Dolorum ducimus sapiente commodi, quibusdam, illo, autem quaerat tempore repellendus obcaecati deserunt delectus! Deleniti, numquam
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam alias labore nisi minus repellat temporibus optio dolor exercitationem perferendis id! Libero facilis, ipsum expedita illo repellat quidem inventore quo perferendis!
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit praesentium voluptatum et error at possimus! Corporis consequatur perspiciatis nulla quos! Est ex fugiat recusandae excepturi tempore corrupti iusto autem sunt?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam similique debitis nam eius velit sint quas ab deserunt libero, ea distinctio amet ipsa recusandae nemo officia aperiam, modi voluptate! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, voluptas. Earum aperiam error quidem velit natus incidunt. Animi tenetur, perferendis architecto minima ea libero aliquam est, ex mollitia harum ullam?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quam aliquam in eius delectus nam, blanditiis consectetur quisquam optio, natus, ipsa animi. Sequi consequatur tempora quia aut aliquid fuga fugiat!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, suscipit quibusdam nesciunt dolorum eos eius. Sunt sit nisi debitis odit numquam iusto, aspernatur ratione accusantium velit, minus necessitatibus, obcaecati facilis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed impedit, dignissimos suscipit cum modi quaerat itaque, laudantium sequi, temporibus veniam saepe est! Libero, quos voluptates! Aperiam doloribus delectus dolorem tempore!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus asperiores quasi, at, commodi consectetur architecto repellendus perspiciatis obcaecati nemo minus quibusdam quod ex officia vero modi rem tenetur earum magnam.
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quia ex totam? Eum vero dolorum dolores officia ad accusantium excepturi suscipit provident dolor, est quaerat, esse ullam ducimus cum sequi.
+                </p>
+
+                <aside class="relacionados">
+                    <figure class="item">
+                        <img src="https://source.unsplash.com/random?cat" alt="images cats">
+
+                        <figcaption class="details">
+                            <h2>cats</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta ipsa amet veniam perspiciatis inventore, natus quibusdam, eius itaque consequuntur cumque at unde quidem molestiae ut, atque alias enim iste.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="item">
+                        <img src="https://source.unsplash.com/random?cat" alt="images cats">
+
+                        <figcaption class="details">
+                            <h2>cats</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta ipsa amet veniam perspiciatis inventore, natus quibusdam, eius itaque consequuntur cumque at unde quidem molestiae ut, atque alias enim iste.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="item">
+                        <img src="https://source.unsplash.com/random?cat" alt="images cats">
+
+                        <figcaption>
+                            <h2>cats</h2 class="details">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dicta ipsa amet veniam perspiciatis inventore, natus quibusdam, eius itaque consequuntur cumque at unde quidem molestiae ut, atque alias enim iste.</p>
+                        </figcaption>
+                    </figure>
+                </aside>
+            </div>
+        </main>
+        <footer class="container">
+            footer
+        </footer>
+    </div>
+</body>
+</html>
