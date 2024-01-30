@@ -88,7 +88,7 @@ Projeto utilizando grid, css animation. Confira as animações no ar!
 # Blog de Gatos 🐱
 Projeto responsivo, aplicando o conceito mobile first, e logo em seguida aplicando para desktop. Versão do desktop existe algumas animações, vale à pena conferir!
 - [Pressione ctrl + clique aqui](https://felipepinheiroregina.github.io/explorer/bloggatos/html/)
-- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/fotoblog)
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/bloggatos)
 ## Mobile 📱
 ![mobile](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/480308ea-db71-4efd-a73f-2df6beaff5eb)
 
