@@ -1,3 +1,3 @@
-var name = 'Felipe' + 'Pinheiro';
-console.log(`${name}`)
-console.log(typeof(name))
+var array = ['lion', 'tiger', 'crocodille']
+
+console.log(array[1],[2]);
