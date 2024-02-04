@@ -29,13 +29,16 @@ sayMyName(
 */
 
 //FUNCTION CONSTRUCT
+/*
 function Person(name){
     this.name = name
     
-    this.walk = function () {
-        return this.name + ' this walking'
+    this.walk = ()  => {
+        return this.name + " it's walking."
     }
 }
 
 let person1 = new Person('Felipe')
 console.log(person1.walk())
+*/
+
