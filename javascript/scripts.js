@@ -1,3 +1,8 @@
-var array = ['lion', 'tiger', 'crocodille']
+/* FUNCTION ANONYMOUS
 
-console.log(array[1]);P
+var sum = function(a, b){ console.log( a + b)}
+sum(28, 27)
+
+*/
+
+
