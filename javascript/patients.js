@@ -1,7 +1,6 @@
 let patients = []
 let option
 
-
 const IMC = (weight, height) => {
     let imc = weight / (height ** 2)
     return imc.toFixed(2)
