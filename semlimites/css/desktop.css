@@ -1,0 +1,100 @@
+@media (min-width: 1050px) {
+   #container {
+        max-width: 100%;
+        
+   } 
+   
+   #head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+   }
+
+   #head #title {
+        display: grid;
+        justify-content: center;
+        grid-row: 1;
+        height: 100%;
+        align-items: end;
+   }
+
+   #texTitle > h1 {
+        font-size: 5.8rem;
+   }
+
+   #texTitle > p {
+        font-size: 3.2rem;
+    }
+
+    #setdown:hover {
+        filter: contrast(200%) saturate(100%);
+        transform: translateY(10px);
+        transition-duration: 0.5s;
+    }
+
+    #sOne {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+
+        background-image: linear-gradient(to right, #343193, #302C63);
+    }
+
+    #sOne .moons {
+        height: 45.0rem;
+    }
+
+    #sOne .moons:hover {
+        transform: rotate(3deg);
+        transition-duration: 1s;
+    }
+
+    #sOne .moons img {
+        animation: move 1s infinite alternate;
+        
+    }
+
+    @keyframes move {
+        100% {
+            transform: translateX(200%);
+            filter: contrast(200%);
+        }
+    }
+
+
+    #sOne .detailsMoons > h2 {
+        font-size: 3.5rem;
+    }
+    
+    #sOne .detailsMoons > p {
+        font-size: 2.0rem;
+    }
+
+    #sTwo {
+        background-image: url(../images/walpapperdesktop.png);
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    #sTwo form {
+        width: 50%;
+    }
+
+    #sTwo h2 {
+        font-size: 4.2rem;
+    }
+
+    #button {
+        background-image: linear-gradient(to right, #343193, #302C63);
+    }
+
+    #button:hover {
+        transform: rotate(3deg);
+        transition-duration: 0.5s;
+        background-image: linear-gradient(to right, #3933e4, #383649);
+    }
+
+    footer {
+        background-image: linear-gradient(to right, #343193, #302C63);
+    }
+}

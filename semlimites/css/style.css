@@ -71,16 +71,16 @@
     flex-direction: column;
     row-gap: 3.3rem;
 
+    max-width: 32.0rem;
+    height: 35.0rem;
     border-radius: 1.9rem;
-    max-width: 35.0rem;
-    max-height: 35.0rem;
     padding: 2.6rem;
     background-color: #FFFFFF;
 }
 
 #sOne .moons > img {
     width: 8.0rem;
-    min-height: 8.0rem;
+    
 }
 
 #sOne .detailsMoons > h2 {
