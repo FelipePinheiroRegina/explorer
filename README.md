@@ -94,3 +94,12 @@ Projeto responsivo, aplicando o conceito mobile first, e logo em seguida aplican
 
 ## Desktop 🖥️
 ![desktop](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/9c54c41a-2fc7-47d0-a439-6b2c753dcb82)
+
+---
+# Explorer sem limites
+Projeto responsivo, com mobile first, com direito à algumas animações na versão desktop.
+Tentando aplicar ao máximo todo conceito ensinado nos stages 1 ao 4, da formação explorer na rocktseat!
+- [Pressione ctrl + clique aqui](https://felipepinheiroregina.github.io/explorer/semlimites/html/index)
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/semlimites)
+
+![semlimites](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/c8d73068-a27a-4450-bea0-1a26e6b2285d)
