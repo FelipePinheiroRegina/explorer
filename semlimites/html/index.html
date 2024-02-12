@@ -1,23 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No Boundless</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap" rel="stylesheet">
 </head>
     <body>
     <div id="container">
-        <header>
-            header
+        <header id="head">
+            <img id="astronaut" src="../images/astronaut.png" alt="">
+
+            <div id="title">
+                <div id="texTitle">
+                    <h1>Explore sem limites</h1>
+                    <p>Porque o aprendizado é contínuo</p>
+                </div>
+
+                <img id="setdown" src="../images/setdown.svg" alt="seta para baixo">
+                
+            </div>
         </header>
 
         <main>
             <section id="sOne">
-                <div></div>
-                <div></div>
-                <div></div>
+                <figure class="moons">
+                    <img src="../images/moonyellow.png" alt="Lua amarela">
+
+                    <figcaption class="detailsMoons">
+                        <h2>Não pare nunca</h2>
+                        <p>
+                            Se você deseja ter sucesso nos estudos, é fundamental que você adote uma mentalidade de "não pare nunca". Estudar de forma consistente e contínua é a chave para o progresso e a conquista de seus objetivos.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="moons">
+                    <img src="../images/moonblue.png" alt="Lua amarela">
+
+                    <figcaption class="detailsMoons">
+                        <h2>Só volta</h2>
+                        <p>
+                            Se você parou ou perdeu o ritmo em alguma atividade ou projeto, saiba que nunca é tarde para recomeçar. Às vezes, as circunstâncias podem mudar, ou podemos nos sentir desmotivados ou sobrecarregados.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="moons">
+                    <img src="../images/moonpink.png" alt="Lua amarela">
+
+                    <figcaption class="detailsMoons">
+                        <h2>Siga seu ritmo</h2>
+                        <p>
+                            Avançar pouco a pouco mantém progresso constante em objetivos, evitando parar ou desistir. Mesmo pequenos passos nos aproximam do destino e motivam a continuidade. Não subestime o poder de cada ação rumo ao objetivo final.
+                        </p>
+                    </figcaption>
+                </figure>
             </section>
             
             <section id="sTwo">
@@ -26,24 +71,26 @@
 
                     <div class="inputs">
                         <label for="name">Seu nome</label>
-                        <input type="text" name="name" id="idname">
+                        <input id="person" type="text" name="name" id="idname" autocomplete="off" placeholder="Seu nome">
                     </div>
 
                     <div class="inputs">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="idemail">
+                        <input id="i-email"  type="email" name="email" id="idemail" autocomplete="off" placeholder="Email">
                     </div>
 
                     <div class="inputs">
                         <label for="textarea">Digite sua mensagem aqui</label>
-                        <textarea name="textarea" id="idtextarea" cols="30" rows="10"></textarea>
+                        <textarea name="textarea" id="idtextarea" placeholder="Digite sua mensagem aqui..."></textarea>
                     </div>
 
-                    <input type="submit" value="Enviar Mensagem">   
+                    <input id="button" type="submit" value="Enviar Mensagem">   
                 </form>
             </section>
         </main>
-        <footer>footer</footer>
+        <footer>
+            <p>© 2023 - Rocketseat Explorer</p>
+        </footer>
     </div> 
     </body>
 </html>
