@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Intensivão</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;900&display=swap" rel="stylesheet">
     
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            font-family: 'Mulish', sans-serif;
+            font-weight: 900;
         }
 
         main > * {
             border: 1px solid black;
         }
 
+        body {
+            background-color: black;
+        }
         main {
             display: grid;
             height: 100vh;
             grid-template-rows: repeat(3, 1fr);
+            margin-bottom: 50px;
+            background-color: black;
         }
 
         .container > * {
@@ -28,57 +40,169 @@
 
         .container {
             display: grid;
-            grid-template-columns: repeat(5, 1fr); 
-            gap: 10px;
+            grid-template-columns: repeat(5, 20%); 
+          
         }
 
         #answer {
             display: grid;
             place-items: center;
+            font-size: 80px;
+            letter-spacing: 20px;
+            color: white;
+
+            background-image: linear-gradient(to right, rgb(187, 129, 241),rgb(15, 179, 124));
         }
 
+        form {
+            display: grid;
+            grid-template-rows: repeat(3, 1fr);
+            height: 100%;
+            
+            place-items: center;
+            gap: 10px;
+            padding: 20px;
+            background-color: black;
+        }
+ 
+        .styleInput::-webkit-inner-spin-button,
+        .styleInput::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
        
+       .styleInput {
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: rgb(187, 129, 241);
+            color: black;
+            font-size: 20px;
+            color: white  ;
+            border-radius: 50%;
+            text-align: center;  
+       }
+
+       .button {
+        height: 50px;
+        border: none;
+        
+        background-color: rgb(15, 179, 124);
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        letter-spacing: 5px;
+       }
+
+       .hello {
+        display: grid;
+        place-items: center;
+        background-color: black;
+        color: white;
+       }
+
+       .hello > p {
+        display: grid;
+        background-color: rgb(15, 179, 124);
+        height: 50px;
+        align-items: center;
+        padding: 10px;
+        border-radius: 10px;
+        letter-spacing: 2px;
+       }
+
+       .hello > p:hover, .button:hover {
+        cursor: pointer;
+        transform: rotate(360deg);
+        transition-duration: 1s;
+       } 
     </style>
 </head>
     <body>
         <main>
             <div class="container">
-                <div onclick="helloWorld()">
-                    Imprima Hello World
+                <div class="hello" onclick="helloWorld()">
+                   <p>Imprima Hello, World!</p>
                 </div>
                 
                 <div>
                     <form>
-                        <input type="number" name="n1" id="idn1">
+                        <input class="styleInput" type="number" name="n1" id="idn1">
 
-                        <input type="number" name="n2" id="idn2">
+                        <input class="styleInput" type="number" name="n2" id="idn2">
 
-                        <input type="button" value="Somar" onclick="Somar()">
+                        <input class="button" type="button" value="Somar" onclick="Somar()">
                     </form>
                 </div>
                 
                 <div>
                     <form>
-                        <input type="text" name="enumb" id="idenumb">
+                        <input class="styleInput" type="text" name="enumb" id="idenumb">
 
-                        <input type="button" value="É número?" onclick="enumber()">
+                        <input class="button" type="button" value="É número?" onclick="enumber()">
                     </form>
-
                 </div>
-                <div></div>
-                <div></div>
+                
+                <div>
+                    <form>
+                        <input class="styleInput" type="text" name="string" id="idstring">
+                        <input class="button" type="button" value="É string?" onclick="isString()">
+                    </form>
+                </div>
+                <div>
+                    <form>
+                        <input class="styleInput" type="text" name="boo" id="idboo">
+                        
+                        <input class="button" type="button" value="É boolean?" onclick="isBoolean()">
+                    </form>
+                </div>
             </div>
             
             <div id="answer">
-                ola
+                Bem - Vindo!
             </div>
             
             <div class="container">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>
+                    <form>
+                        <input class="styleInput" type="number" name="number1" id="idnumber1">
+                        <input class="styleInput" type="number" name="number2" id="idnumber2">
+                        <input class="button" type="button" value="Subtrair" onclick="subtracao()">
+                    </form>
+                </div>
+
+                <div>
+                    <form>
+                        <input class="styleInput" type="number" name="mult1" id="idmult1">
+                        <input class="styleInput" type="number" name="mult2" id="idmult2">
+                        <input class="button" type="button" value="Multiplicar" onclick="multiplicar()">
+                    </form>
+
+                </div>
+                
+                <div>
+                    <form>
+                        <input class="styleInput" type="number" name="div1" id="iddiv1">
+                        <input class="styleInput" type="number" name="div2" id="iddiv2">
+                        <input class="button" type="button" value="Dividir" onclick="dividir()">
+                    </form>
+                </div>
+
+                <div>
+                    <form>
+                        <input class="styleInput" type="number" name="par" id="idpar">
+                        
+                        <input class="button" 
+                        type="button" value="É par?" onclick="par()">
+                    </form>
+                </div>
+
+                <div>
+                    <form>
+                        <input class="styleInput" type="number" name="impar" id="idimpar">
+                        <input class="button" type="button" value="É impar?" onclick="impar()">
+                    </form>
+                </div>
             </div>
         </main> 
         <script src="main.js"></script>
