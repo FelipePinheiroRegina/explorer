@@ -104,7 +104,7 @@ function dividir() {
 }
 
 function par() {
-    let isPar = document.getElementById('idpar')
+    let isPar = document.getElementById('idispar')
 
     isPar = Number(isPar.value)
 
@@ -117,7 +117,7 @@ function par() {
 }
 
 function impar() {
-    let isImpar = document.getElementById('idimpar')
+    let isImpar = document.getElementById('idisimpar')
 
     isImpar = Number(isImpar.value)
 
