@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        main > * {
+            border: 1px solid black;
+        }
+
+        main {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .container > * {
+            border: 1px solid black;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); 
+            gap: 10px;
+        }
+
+        #answer {
+            display: grid;
+            place-items: center;
+        }
+
+       
+    </style>
+</head>
+    <body>
+        <main>
+            <div class="container">
+                <div onclick="helloWorld()">
+                    Imprima Hello World
+                </div>
+                
+                <div>
+                    <form>
+                        <input type="number" name="n1" id="idn1">
+
+                        <input type="number" name="n2" id="idn2">
+
+                        <input type="button" value="Somar" onclick="Somar()">
+                    </form>
+                </div>
+                
+                <div>
+                    <form>
+                        <input type="text" name="enumb" id="idenumb">
+
+                        <input type="button" value="É número?" onclick="enumber()">
+                    </form>
+
+                </div>
+                <div></div>
+                <div></div>
+            </div>
+            
+            <div id="answer">
+                ola
+            </div>
+            
+            <div class="container">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </main> 
+        <script src="main.js"></script>
+    </body>
+</html>
