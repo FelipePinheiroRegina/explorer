@@ -1,26 +1,49 @@
+// Variables
 let numberRandom = Math.round(Math.random() * 10)
-let contador = 1
+// Variable for control
+let xAttempts = 1
+// Class for the answer
+let showAttempts = document.querySelector('#showAttempts')
+// Buttons
+const buttonTry = document.querySelector('#buttonTry')
+const buttonPlayAgain = document.querySelector('#buttonPlayAgain')
+// Class sections
+const screen1 = document.querySelector('.screen1')
+const screen2 = document.querySelector('.screen2')
 
-let winner = document.getElementById('winner')
-let screen1 = document.getElementById('screen1')
-let screen2 = document.getElementById('screen2')
 
-function adivinhar() {
-    let numberUser = document.getElementById('idnumber')
-    numberUser = Number(numberUser.value)
+// Events
+buttonTry.addEventListener('click', guessNumber)
+buttonPlayAgain.addEventListener('click', playAgain)
+
+
+// Functions
+function guessNumber(){
+    let numberUser = document.querySelector('#idnumber')
     
-    if (numberUser === numberRandom) {
-        if (contador == 1) {
-            alert(`Você acertou em ${contador} tentativa`)
-            
+    if(numberUser.value == numberRandom){
+        eventsToggles()
+        if(xAttempts == 1){
+            showAttempts.innerHTML = `Você acertou em ${xAttempts} tentativa. Muito bom!`
         }
-        else {
-            alert(`Você acertou em ${contador} tentativas`)
-        } 
+        else{
+            showAttempts.innerHTML = `Você acertou em ${xAttempts} tentativas. Precisa melhorar!`
+        }
     }
     else{
-        alert('Errou! tente denovo.')
-        contador++
-    }  
+        alert('Você errou, tente novamente! *__*')
+        xAttempts++
+        numberUser.value = ''
+    }
 }
 
+function playAgain(){
+    eventsToggles()
+    xAttempts = 1
+    document.querySelector('#idnumber').value = ''
+}
+
+function eventsToggles(){
+    screen1.classList.toggle('hide')
+    screen2.classList.toggle('hide')
+}
