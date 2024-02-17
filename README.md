@@ -103,3 +103,11 @@ Tentando aplicar ao máximo todo conceito ensinado nos stages 1 ao 4, da formaç
 - [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/semlimites)
 
 ![semlimites](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/c8d73068-a27a-4450-bea0-1a26e6b2285d)
+
+---
+# Biscoito da sorte
+Usando JavaScript para manipular o DOM, para o dinamismo da aplicação.
+
+Projeto responsivo, com mobile first, com direito à algumas animações na versão desktop.
+
+[Cookie](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/9122c75a-0c37-4cb7-8211-c188147cc279)
