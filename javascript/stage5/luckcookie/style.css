@@ -21,6 +21,7 @@ main {
     place-items: center;
     
     margin: auto;
+    height: 100vh;
     width: 100%;
     background-image: linear-gradient(var(--background)); 
 }
