@@ -34,7 +34,8 @@ section {
     place-items: center;
     
     max-width: 20rem;
-    padding: 4.8rem 6.4rem;
+    max-height: max-content;
+    padding: 1rem;
     border-radius: .5rem;
     background: var(--color-white);
     box-shadow: 0px 20px 50px black;
@@ -46,13 +47,13 @@ section {
 }
 
 .closedcookie .text > h1, .opencookie > h1 {
-    font-size: 2.0rem;
+    font-size: 2.4rem;
     font-weight: bold;
     font-family: var(--font-montserrat);
 }
 
 .closedcookie .text > p {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 section img {
@@ -61,7 +62,7 @@ section img {
 
 .opencookie .luck {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 2.4rem;
     font-family: var(--font-dancing);
     background-color: #E4EDF1;
     padding: 1rem;
