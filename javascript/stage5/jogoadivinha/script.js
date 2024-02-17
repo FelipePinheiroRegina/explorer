@@ -9,20 +9,40 @@ let buttonPlayAgain = document.querySelector('#buttonPlayAgain')
 
 // Events
 buttonTry.addEventListener('click', guessPlay)
+buttonPlayAgain.addEventListener('click', playAgain)
+document.addEventListener('keypress', keyAgain)
 
-function guessPlay(){
-
+// Functions
+function guessPlay(e){
+    e.preventDefault()
 
     let numberUser = document.querySelector('#idnumber')
-
-    if (Number(numberUser.value) == numberRandom){
-        
-        showAttempts.innerHTML = `Você acertou em ${xAttempts} tentativa(s)`
+    
+    if(numberUser.value == ''){
+        alert('insira um número!')
     }
-    else {
-        alert('Errou!')
-        xAttempts++
-        numberUser.value = ''
+    else{
+        if (Number(numberUser.value) == numberRandom){
+            toggles()
+            showAttempts.innerHTML = `Você acertou em ${xAttempts} tentativa(s)`
+        }
+        else {
+            alert('Errou!')
+            xAttempts++
+            numberUser.value = ''
+        }
+    }  
+}
+
+function playAgain(){
+    toggles()
+    xAttempts = 1
+    let fieldBlank = document.querySelector('#idnumber').value = ''
+}
+
+function keyAgain(press){
+    if(press.key === 'Enter' && screen1.classList.contains('hide')){
+        playAgain()
     }
 }
 
