@@ -41,7 +41,7 @@ section {
     color: rgb(133, 131, 131);
 }
 
-form > input {
+form > #idnumber{
     width: 40px;
     height: 50px;
     border: none;
@@ -57,28 +57,13 @@ input::-webkit-outer-spin-button {
     margin: 0;
 }
 
-label {
-    color: #FFFFFF;
-    font-size: 14px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
 form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr 70%);
-    place-items: center;
+    display: flex;
     border-radius: 4px;
     overflow: hidden;
-    
-
-    width: 120px;
-    height: 50px;
-    background-color: #7879F1;
-    text-align: center;
 }
 
-button {
+button{
     border: none;
     background-color: #7879F1;
     border-radius: 4px;
