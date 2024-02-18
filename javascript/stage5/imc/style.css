@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    font-size: 62.5%;
+
+    /* Colors */
+    --background-main: #040924;
+    --title-main: #0C3440;
+    
+    --background-card: #FFFFFF;
+
+    --text-label: #00453A;
+    --background-input: #DCE2E9;
+    --focus-input: #02799D;
+    --place-input: rgba(73, 80, 87, 0.521);
+
+    --background-button: #02799D;
+    --text-button: #FFFFFF;
+
+    --background-error: #F03E3E;
+    --text-error: #FFFFFF;
+
+    --background-modal: rgba(12, 52, 64, 50%);
+    --text-modal: #0C3440;
+}
+
+main.container {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+    
+    background-color: var(--background-main);
+}
+
+section.card {
+    max-width: 43.0rem;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    background-color: var(--background-card);
+}
+
+section.card > h1 {
+    color: var(--title-main);
+    font-size: 3.2rem;
+    line-height: 4.0rem;
+}
+
+section.card > form > label {
+    color: var(--text-label);
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+}
+
+section.card > form > input {
+    width: 100%;
+}
+
+section.card > form > input::placeholder {
+    font-size: 1.6rem;
+    line-height: 2.0rem;
+    color: var(--place-input);
+}
+
+section.card > form > button {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 2.0rem;
+    
+    width: 100%;
+
+    background-color: var(--background-button);
+    color: var(--text-button);
+    
+}
