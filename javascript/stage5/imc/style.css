@@ -21,13 +21,19 @@
     --place-input: rgba(73, 80, 87, 0.521);
 
     --background-button: #02799D;
+    --bg-button-hover: #044b61;
     --text-button: #FFFFFF;
 
     --background-error: #F03E3E;
     --text-error: #FFFFFF;
 
-    --background-modal: rgba(12, 52, 64, 50%);
+    --background-modal: rgba(4, 9, 36, 0.514);
     --text-modal: #0C3440;
+}
+
+/* MAIN SETTINGS */
+body {
+    background-color: var(--background-main);
 }
 
 main.container {
@@ -42,38 +48,136 @@ section.card {
     max-width: 43.0rem;
     padding: 4.8rem 6.4rem 6.4rem 6.4rem;
     background-color: var(--background-card);
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.11);
 }
 
 section.card > h1 {
     color: var(--title-main);
     font-size: 3.2rem;
     line-height: 4.0rem;
+    margin-bottom: 3.0rem;
 }
 
-section.card > form > label {
+.field {
+    display: grid;
+    gap: .8rem;
+}
+
+.field + .field {
+    margin-top: 1.6rem;
+}
+
+section.card > form > .field > label {
     color: var(--text-label);
     font-size: 1.4rem;
     line-height: 1.8rem;
 }
 
-section.card > form > input {
+section.card > form > .field > input {
     width: 100%;
+    height: 5.2rem;
+    padding: 1.6rem;
+    border: none;
+    border-radius: .4rem;
+    background-color: var(--background-input);
 }
 
-section.card > form > input::placeholder {
+section.card > form > .field > input::placeholder {
     font-size: 1.6rem;
     line-height: 2.0rem;
     color: var(--place-input);
+}
+
+section.card > form > .field > input:focus {
+    outline: 2px solid var(--focus-input);
 }
 
 section.card > form > button {
     font-size: 1.6rem;
     font-weight: bold;
     line-height: 2.0rem;
+    margin-top: 3.2rem;
+    border: none;
+    border-radius: .4rem;
     
     width: 100%;
+    height: 5.2rem;
 
     background-color: var(--background-button);
     color: var(--text-button);
-    
+
+    cursor: pointer;
+    transition: background 0.5s;
+}
+
+section.card > form > button:hover {
+    background-color: var(--bg-button-hover);
+}
+
+/* MODAL SETTINGS */
+div.modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+div.modal {
+    opacity: 0;
+    visibility: hidden;
+
+    position: absolute;
+    background-color: var(--background-modal);
+    inset: 0;
+
+    display: grid;
+    place-content: center;
+}
+
+div.modal > .cardModal {
+    position: relative;
+
+    padding: 4.8rem 6.4rem;
+    background-color: #FFFFFF;
+    border-radius: .6rem;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.11);
+}
+
+.cardModal > h2.yourImc {
+    font-size: 3.2rem;
+    color: var(--text-modal);
+}
+
+.cardModal .x {
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    border-radius: 50%;
+
+    cursor: pointer;
+    transition: transform .5s;
+}
+
+.cardModal .x:hover {
+    transform: scale(1.6);
+}
+
+/* ERROR SETTINGS */
+div.error {
+    display: grid;
+    place-content: center;
+    height: 3.6rem;
+    background-color: var(--background-error);
+}
+
+div.error > p {
+    font-size: 1.6rem;
+    color: var(--text-error);
+    font-weight: bold;
+    line-height: 2.0rem;
+}
+
+@keyframes visible {
+    0% {
+        transform: translateY(-100%);
+    }
 }

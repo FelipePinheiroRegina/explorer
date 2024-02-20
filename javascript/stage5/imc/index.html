@@ -21,16 +21,24 @@
     <title>Calculadora IMC</title>
 </head>
     <body>
+        <div class="error">
+            <p>Digite somente números</p>
+        </div>
+
        <main class="container">
             <section class="card">
                 <h1>Cálculo de IMC</h1>
 
                 <form>
-                    <label for="weight">Peso (kg)</label>
-                    <input type="text" name="weight" id="weight" placeholder="60">
+                    <div class="field">
+                        <label for="weight">Peso (kg)</label>
+                        <input type="text" name="weight" id="weight" placeholder="60">
+                    </div>
 
-                    <label for="height">Altura (cm)</label>
-                    <input type="text" name="height" id="height" placeholder="165">
+                    <div class="field">
+                        <label for="height">Altura (cm)</label>
+                        <input type="text" name="height" id="height" placeholder="165">
+                    </div>
 
                     <button type="submit"> 
                         Calcular IMC
@@ -39,5 +47,13 @@
                 </form>
             </section>
        </main>
+
+       <div class="modal">
+        <div class="cardModal">
+            <h2 class="yourImc">Seu IMC é de 28</h2>
+
+            <img class="x" src="./assets/close.svg" alt="X para fechar o modal na tela">
+        </div>
+    </div>
     </body>
 </html>
