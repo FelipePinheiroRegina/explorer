@@ -167,6 +167,21 @@ div.error {
     place-content: center;
     height: 3.6rem;
     background-color: var(--background-error);
+
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -6%;
+}
+
+div.error.vError {
+    animation: visible 1s;
+}
+
+@keyframes visible {
+    100% {
+        transform: translateY(100%);
+    }
 }
 
 div.error > p {
@@ -174,10 +189,4 @@ div.error > p {
     color: var(--text-error);
     font-weight: bold;
     line-height: 2.0rem;
-}
-
-@keyframes visible {
-    0% {
-        transform: translateY(-100%);
-    }
 }
