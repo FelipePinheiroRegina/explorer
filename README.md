@@ -109,5 +109,15 @@ Tentando aplicar ao máximo todo conceito ensinado nos stages 1 ao 4, da formaç
 Usando JavaScript para manipular o DOM, para o dinamismo da aplicação.
 
 Projeto responsivo, com mobile first, com direito à algumas animações na versão desktop.
+- [Aplicação no ar!](https://felipepinheiroregina.github.io/explorer/javascript/stage5/luckcookie/)
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/javascript/stage5/luckcookie)
 
 [Cookie](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/9122c75a-0c37-4cb7-8211-c188147cc279)
+
+---
+# Calculador de IMC
+Manipulando dados com DOM, aplicando conceitos, como, ES6Modules, e um pouco de cleanCode.
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/javascript/stage5/imc)
+- [Aplicação no ar!](https://felipepinheiroregina.github.io/explorer/javascript/stage5/imc/)
+
+[Screencast from 22-02-2024 21:49:41.webm](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/fc5fcfdc-0896-4196-a8d0-3dd88d722503)
