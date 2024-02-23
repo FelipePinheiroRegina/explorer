@@ -162,6 +162,13 @@ div.modal > .cardModal {
 }
 
 /* ERROR SETTINGS */
+div.error.openerror {
+    visibility: visible;
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
 div.error {
     display: grid;
     place-content: center;
@@ -171,17 +178,13 @@ div.error {
     position: absolute;
     right: 0;
     left: 0;
-    top: -6%;
-}
+    top: 0;
 
-div.error.vError {
-    animation: visible 1s;
-}
+    visibility: hidden;
+    opacity: 0;
 
-@keyframes visible {
-    100% {
-        transform: translateY(100%);
-    }
+    transform: translateY(-30px);
+    transition: transform 1s;
 }
 
 div.error > p {
