@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color-darkmode: hsl(240, 5%, 7%);
+    --text-color-darkmode: hsl(240, 40%, 98%);
+    --bg-color-lightmode: hsl(240, 40%, 98%);
+    --text-color-lightmode: hsl(240, 5%, 7%);
+    --bg-buttons: hsl(0, 2%, 11%);
+
+    --color-buttons: hsl(194, 100%, 63%);
+
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    appearance: none;
+}
+
+html.light div#app, 
+html.light button#darkOrlight {
+    background-color: var(--bg-color-lightmode);
+    color: var(--text-color-lightmode);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+button#darkOrlight {
+    position: absolute;
+    top: 3.2rem;
+    right: 3.2rem;
+    
+    font-size: 3.2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color-darkmode);
+
+    transition: transform 0.5s;
+}
+
+button#darkOrlight:hover {
+    transform: scale(1.2);
+} 
+
+
+.flex {
+    display: flex;
+}
+
+div#app {
+    background-color: var(--bg-color-darkmode);
+    color: var(--text-color-darkmode);
+
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: 100vh;
+    gap: 1.6rem;
+}
+
+section#timer {
+    font-size: 9.6rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+section#controls .colorButtonSecundary{
+    color: var(--color-buttons);
+}
+
+section#controls {
+    background-color: var(--bg-buttons);
+    padding: 2.2rem 4rem;
+    border-radius: 999rem; 
+    gap: 1.6rem;   
+}
+
+section#controls > button {
+    font-size: 6.4rem;
+    color: var(--text-color-darkmode);
+    background-color: transparent;
+    border: none;
+    color: var();
+    cursor: pointer;
+}
+
+html.running .ph-play-circle,
+html.running .ph-timer,
+html.music-on .ph-speaker-none,
+
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high{
+    display: none;
+}
