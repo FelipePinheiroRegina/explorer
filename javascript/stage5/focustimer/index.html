@@ -27,31 +27,42 @@
 
         <section id="controls" class="flex">
             <button 
-            class="ph ph-play-circle
-             colorButtonSecundary">
-             <span class="sr-only">Iniciar cronômetro</span>
+                data-action="toggleRunning"
+                class="ph ph-play-circle
+                colorButtonSecundary">
+                <span class="sr-only">Iniciar cronômetro</span>
             </button>
             
             <button 
-            class="ph ph-pause-circle 
-            colorButtonSecundary">
-            <span class="sr-only">Pausar cronômetro</span>
+                data-action="toggleRunning"
+                class="ph ph-pause-circle 
+                colorButtonSecundary">
+                <span class="sr-only">Pausar cronômetro</span>
             </button>
             
-            <button class="ph ph-timer">
+            <button 
+                data-action="set"
+                class="ph ph-timer">
                 <span class="sr-only">Ajustar cronômetro</span>
             </button>
-            <button class="ph ph-stop-circle">
+            
+            <button 
+                data-action="reset"
+                class="ph ph-stop-circle">
                 <span class="sr-only">Resetar cronômetro</span>
             </button>
-            <button class="ph ph-speaker-none">
+            
+            <button 
+                data-action="toggleMusic"
+                class="ph ph-speaker-none">
                 <span class="sr-only">Iniciar música</span>
             </button>
             
             <button 
-            class="ph ph-speaker-high
-             colorButtonSecundary">
-             <span class="sr-only">Tirar música</span>
+                data-action="toggleMusic"
+                class="ph ph-speaker-high
+                colorButtonSecundary">
+                <span class="sr-only">Tirar música</span>
             </button>
         </section>
     </div>
