@@ -9,4 +9,5 @@ export function start(minutes, seconds) {
     updateDisplay()
 
     events.registerConstrols()
+    events.setMinutes()
 }
