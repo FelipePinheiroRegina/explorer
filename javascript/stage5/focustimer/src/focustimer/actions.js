@@ -25,4 +25,13 @@ export function set() {
 
 export function toggleMusic() {
     document.documentElement.classList.toggle('music-on')
+    
+    if(state.isMute = true) {
+        sounds.bakcgroundAudio.play()
+        return
+    }
+    sounds.buttonPressAudio.pause()
+   
+
+    
 }
