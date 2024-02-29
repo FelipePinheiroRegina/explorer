@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+#container-two-columns > * {
+    border: 1px solid black;
+}
+
+#container-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    height: 100vh;
+    font-size: 1.6rem;
+}
+
+#block-timer {
+    display: grid;
+    place-content: center;
+}
+
+#timer {
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    font-size: 12.6rem;
+    font-weight: 500;
+    color: #323238;  
+}
+
+#buttons-timer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#buttons-timer > button {
+    border: none;
+    background-color: transparent;
+    color: #323238;
+    font-size: 4.8rem; 
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute; 
+    opacity: 0;
+}
+
+#sounds-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 13.8rem);
+
+    place-content: center;
+}
+
