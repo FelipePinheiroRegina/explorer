@@ -121,3 +121,11 @@ Manipulando dados com DOM, aplicando conceitos, como, ES6Modules, e um pouco de 
 - [Aplicação no ar!](https://felipepinheiroregina.github.io/explorer/javascript/stage5/imc/)
 
 [Screencast from 22-02-2024 21:49:41.webm](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/fc5fcfdc-0896-4196-a8d0-3dd88d722503)
+
+---
+# FocusTimer ⏲️
+Projeto focando nas partições de módulos, utilizando sons, adicionando o light e dark mode.
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/javascript/stage5/focustimer)
+- [Aplicação no ar!](https://felipepinheiroregina.github.io/explorer/javascript/stage5/focustimer/)
+
+[Screencast from 28-02-2024 21:30:37.webm](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/85fb1339-da96-4495-b475-53b6855bfef1)
