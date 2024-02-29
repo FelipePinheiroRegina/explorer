@@ -15,6 +15,7 @@ export function countDown() {
     if (!state.isRunning){
         return;
     }
+    clearTimeout(state.countSet)
     
     let minutes = Number(el.minutes.textContent)
     let seconds = Number(el.seconds.textContent)
@@ -33,5 +34,6 @@ export function countDown() {
     }
     
     updateDisplay(minutes, seconds)
-    setTimeout(() => countDown(), 1000)
+    
+    state.countSet = setTimeout(() => countDown(), 1000)
 }
