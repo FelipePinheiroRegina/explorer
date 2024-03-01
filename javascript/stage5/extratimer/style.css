@@ -8,21 +8,17 @@
     font-size: clamp(40%, 1% + 2vw, 62.5%);
 }
 
-#container-two-columns > * {
-    border: 1px solid black;
-}
-
 #container-two-columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
     height: 100vh;
-    font-size: 1.6rem;
+
 }
 
 #block-timer {
     display: grid;
     place-content: center;
+    min-width: 0;
 }
 
 #timer {
@@ -39,10 +35,13 @@
 }
 
 #buttons-timer > button {
+    font-size: 5rem;
+    font-weight: bold;
     border: none;
     background-color: transparent;
     color: #323238;
-    font-size: 4.8rem; 
+    cursor: pointer;
+    
 }
 
 .sr-only {
@@ -50,12 +49,29 @@
     height: 1px;
     position: absolute; 
     opacity: 0;
+    overflow: hidden;
 }
 
 #sounds-buttons {
     display: grid;
     grid-template-columns: repeat(2, 13.8rem);
-
     place-content: center;
+    gap: 3.2rem;
 }
 
+#sounds-buttons > button{
+    font-size: 5rem;
+    padding: 4.8rem;
+    border-radius: 2.4rem;
+    border: none;
+    color: #323238;
+    background-color: #E1E1E6;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.452);
+}
+
+#sounds-buttons > .button-clicked {
+    background-color: #02799D;
+    color: #FFFFFF;
+}
