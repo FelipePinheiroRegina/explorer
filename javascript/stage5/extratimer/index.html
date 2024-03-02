@@ -10,6 +10,8 @@
     <meta name="description" content="Timer - Pomodoro">
     
     <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="./js/main.js" defer></script>
     
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     
@@ -28,22 +30,26 @@
 
                 <div id="buttons-timer">
                     <button 
-                        class="ph ph-play-circle">
+                        class="ph ph-play-circle"
+                        data-action="running">
                         <span class="sr-only">Play</span>
                     </button>
                     
                     <button 
-                        class="ph ph-stop-circle">
+                        class="ph ph-stop-circle"
+                        data-action="reset">
                         <span class="sr-only">Pause</span>
                     </button>
 
                     <button 
-                        class="ph ph-plus-circle">
+                        class="ph ph-plus-circle"
+                        data-action="moreMinutes">
                         <span class="sr-only">Aumentar 5 minutos</span>    
                     </button>
 
                     <button 
-                        class="ph ph-minus-circle">
+                        class="ph ph-minus-circle"
+                        data-action="minusMinutes">
                         <span class="sr-only">Diminuir 5 minutos</span>    
                     </button>
                 </div>
