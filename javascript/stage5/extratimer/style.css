@@ -40,8 +40,18 @@
     border: none;
     background-color: transparent;
     color: #323238;
-    cursor: pointer;
+    cursor: pointer; 
     
+    transition: transform 0.3s;
+}
+
+#buttons-timer > button:hover {
+    transform: scale(1.1);
+}
+
+html.running #buttons-timer .ph-play-circle,
+html:not(.running) #buttons-timer .ph-pause-circle {
+    display: none;
 }
 
 .sr-only {

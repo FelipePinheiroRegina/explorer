@@ -23,9 +23,9 @@
         <div id="container-two-columns">
             <div id="block-timer">
                 <div id="timer">
-                    <span>00</span>
+                    <span id="minutes">00</span>
                     <span>:</span>
-                    <span>00</span>
+                    <span id="seconds">00</span>
                 </div>
 
                 <div id="buttons-timer">
@@ -33,6 +33,12 @@
                         class="ph ph-play-circle"
                         data-action="running">
                         <span class="sr-only">Play</span>
+                    </button>
+
+                    <button
+                        class="ph ph-pause-circle"
+                        data-action="running">
+                        <span class="sr-only">Pause</span>
                     </button>
                     
                     <button 
@@ -57,22 +63,26 @@
 
             <div id="sounds-buttons">
                 <button 
-                    class="ph ph-tree">
+                    class="ph ph-tree"
+                    data-sound="jungle">
                     <span class="sr-only">Jungle</span>
                 </button>
                 
                 <button 
-                    class="ph ph-cloud-rain">
+                    class="ph ph-cloud-rain"
+                    data-sound="rain">
                     <span class="sr-only">Clound rain</span>
                 </button>
 
                 <button 
-                    class="ph ph-storefront">
+                    class="ph ph-storefront"
+                    data-sound="store">
                     <span class="sr-only">Coffee shop</span>
                 </button>
 
                 <button 
-                    class="ph ph-campfire">
+                    class="ph ph-campfire"
+                    data-sound="fire">
                     <span class="sr-only">Fireplace</span>
                 </button>
             </div>
