@@ -2,7 +2,7 @@ import { state } from "./state.js"
 import * as f_events from './functionsevents.js'
 import { buttons_timer } from "./requirebuttonsminutesseconds.js"
 import { defaultTimer } from "./timer.js"
-import { whatButton } from "./buttonssounds.js"
+import './buttonssounds.js'
 
 buttons_timer.addEventListener('click', (event) => {
     const functionRequire = event.target.dataset.action
@@ -12,7 +12,5 @@ buttons_timer.addEventListener('click', (event) => {
 
     f_events[functionRequire]()
 })
-
-whatButton()
 
 defaultTimer()
