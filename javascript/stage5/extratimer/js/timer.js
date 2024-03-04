@@ -1,7 +1,7 @@
-import * as functionEvents from './functionsevents.js'
-import * as NumberOfTimer from './requirebuttonsminutesseconds.js'
+import * as functionEvents from './functionstimerblock.js'
+import * as NumberOfTimer from './setallbuttonsandtimer.js'
 import { state } from './state.js'
-import * as sounds from './sounds.js'
+import * as sounds from './setallsounds.js'
 
 export function defaultTimer(minutes, seconds){
    minutes = minutes ?? state.minutes
@@ -16,6 +16,8 @@ export function playTimer(){
         return;
     }
     
+    clearTimeout(state.countSet)
+
     let minutes = Number(NumberOfTimer.minutes.textContent)
     let seconds = Number(NumberOfTimer.seconds.textContent)
 
@@ -35,5 +37,5 @@ export function playTimer(){
 
 
     defaultTimer(minutes, seconds)
-    setTimeout(() => playTimer(), 1000)
+    state.countSet = setTimeout(() => playTimer(), 1000)
 }
