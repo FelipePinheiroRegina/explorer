@@ -129,3 +129,11 @@ Projeto focando nas partições de módulos, utilizando sons, adicionando o ligh
 - [Aplicação no ar!](https://felipepinheiroregina.github.io/explorer/javascript/stage5/focustimer/)
 
 [Screencast from 28-02-2024 21:30:37.webm](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/85fb1339-da96-4495-b475-53b6855bfef1)
+
+---
+# Extra Timer
+Desafio proposto. Nele supliquei os conceitos aprendidos, como, módulos, animações, músicas.
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/javascript/stage5/extratimer)
+- [Aplicação no ar!](https://felipepinheiroregina.github.io/explorer/javascript/stage5/extratimer/)
+
+[Screencast from 03-03-2024 22:13:48.webm](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/90dfc661-5911-461b-89be-cb9bffaab2e4)
