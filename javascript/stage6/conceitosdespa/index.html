@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conceitos de SPA</title>
+    <script type="module" src="index.js" defer></script>
 </head>
 <body>
     <nav>
-        <a href="/" onclick="route()">Home</a>
+        <a href="/home" onclick="route()">Home</a>
         <a href="/about" onclick="route()">Sobre</a>
         <a href="/contact" onclick="route()">Contatos</a>
         <a href="/404" onclick="route()">404</a>
@@ -16,39 +17,5 @@
     <div id="app">
         
     </div>
-
-    <script>
-        const routes = {
-      "/": "/pages/home.html",
-      "/about": "/pages/about.html",
-      "/contact": "/pages/contact.html",
-      404: "/pages/404.html",
-    }
-
-    function route(event) {
-      event = event || window.event
-      event.preventDefault()
-      console.log(route)
-      window.history.pushState({}, "", event.target.href)
-
-      handle()
-    }
-
-    function handle() {
-      
-      const { pathname }  = window.location
-      const route = routes[pathname] || routes[404]
-      fetch(route)
-      .then(data => data.text())
-      .then(html => {
-        document.querySelector('#app').innerHTML = html
-      })
-    }
-
-    handle()
-
-    window.onpopstate = () => handle()
-    window.route = () => route()
-    </script>
 </body>
 </html>
