@@ -8,7 +8,6 @@ export class Router {
     route(event) {
         event = event || window.event
         event.preventDefault()
-        console.log(route)
         window.history.pushState({}, "", event.target.href)
     
         this.handle()
@@ -17,6 +16,7 @@ export class Router {
     handle() {
     
         const pathname = window.location.pathname
+        
         const route = this.routes[pathname] || this.routes[404]
         fetch(route)
         .then(data => data.text())

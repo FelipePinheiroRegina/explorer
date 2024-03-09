@@ -2,9 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
-
-
 
 #menu {
     display: flex;
@@ -12,21 +11,76 @@
     align-items: center;
     gap: 32px;
 
-    padding: 40px 70px;
+    position: absolute;
+    left: 72px;
+    top: 40px;
 }
 
 #menu > a {
-    font-size: 24px;
-    text-decoration: none;
     font-family: sans-serif;
+    font-size: 21px;
     color: white;
+    text-decoration: none;
 }
 
 #menu > a:focus {
     font-weight: bold;
 }
 
-#app {
+#container {
     display: grid;
-    place-self: center;
+    place-content: center;
+    
+    overflow: hidden;
+    height: 100vh;
+    background-image: url(./images/mountains-universe-1\ 1.png);
+    background-size: cover;
 }
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 72px;
+    max-width: 650px;
+    color: white;    
+}
+
+#app > h1 {
+    font-size: 48px;
+}
+
+#app > p {
+    font-size: 18px;
+}
+
+#app > button {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 12px 32px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+html.sideBlock #app {
+    align-items: flex-start;
+}
+
+html.sideBlock #container {
+    justify-content: flex-start;
+}
+
+html.bg2 #container {
+    background-image: url(./images/mountains-universe-2.png);
+    background-position: right;
+}
+
+html.bg3 #container {
+    background-image: url(./images/mountains-universe-3.png);
+    background-position: center bottom;
+}
+
+
+
