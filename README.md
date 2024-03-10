@@ -137,3 +137,10 @@ Desafio proposto. Nele supliquei os conceitos aprendidos, como, módulos, anima�
 - [Aplicação no ar!](https://felipepinheiroregina.github.io/explorer/javascript/stage5/extratimer/)
 
 [Screencast from 03-03-2024 22:13:48.webm](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/90dfc661-5911-461b-89be-cb9bffaab2e4)
+
+---
+# Single Page Application (SPA)
+Praticando conceitos de SPA, e, modularização, com um site visualmente OK.
+- [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/javascript/stage6/praticaspa)
+
+[Screencast from 10-03-2024 10:23:45.webm](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/863313d5-44ec-4fa5-acd9-fcb31f7670b8)
