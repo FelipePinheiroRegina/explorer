@@ -5,58 +5,72 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link rel="stylesheet" href="style.css">
+
+        <script type="module" src="./javascript/main.js" defer></script>
         
         <title>Github Favorites</title>
     </head>
     <body>
-        <div class="top">
+        <div id="app">
             <header>
                 <h1>GITHUB FAVORITES</h1>
+                <nav class="search">
+                    <label for="search" class="sr-only">Usuário do Github</label>
+                    <input type="search" name="search" id="idsearch" placeholder="Usuário do Github">
+                    <button class="plus">&plus;</button>
+                </nav>
             </header>
-            <nav class="search">
-                <label for="search" class="sr-only">Usuário do Github</label>
-                <input type="search" name="search" id="idsearch" placeholder="Usuário do Github">
-                <button class="plus">&plus;</button>
-            </nav>
-        </div>
-        <main>
-            <section>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Usuário</th>
-                       
-                            <th>Repositories</th>
-                       
-                            <th>Fallowers</th>
-                            <th>
-                                
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="users">
-                                <img src="https://www.github.com/felipe-pinheiro98.png" alt="Imagem de Felipe">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Repositories</th>
+                        <th>Fallowers</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="users">
+                            <img src="https://www.github.com/felipe-pinheiro98.png" alt="Imagem de Felipe">
 
-                                <a href="https://www.github.com/felipe-pinheiro98">
-                                    <p>Felipe Pinheiro</p>
-                                    <span>felipe-pinheiro98</span>
-                                </a>
-                            </td>
-                            <td class="repositories">
-                                76
-                            </td>
-                            <td class="fallowers">
-                                10000
-                            </td>
-                            <td class="times">
-                                &times;
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
+                            <a href="https://www.github.com/felipe-pinheiro98">
+                                <p>Felipe Pinheiro</p>
+                                <span>felipe-pinheiro98</span>
+                            </a>
+                        </td>
+                        <td class="repositories">
+                            76
+                        </td>
+                        <td class="fallowers">
+                            10000
+                        </td>
+                        <td class="times">
+                            &times;
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="users">
+                            <img src="https://www.github.com/RichardPinheiro.png" alt="Imagem de Felipe">
+
+                            <a href="https://www.github.com/RichardPinheiro">
+                                <p>Richard Pinheiro</p>
+                                <span>RichardPinheiro</span>
+                            </a>
+                        </td>
+                        <td class="repositories">
+                            76
+                        </td>
+                        <td class="fallowers">
+                            10000
+                        </td>
+                        <td class="times">
+                            &times;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
