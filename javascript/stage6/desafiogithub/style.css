@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    /* Variveis de cores */
+    --bg-finally: #000000;
+
+    --bg-button: #065E7C;
+    --bg-input: #06181C;
+    --tt-button: #FFFFFF;
+    --place-holder: #7C7C8A;
+
+    --tt-aplication: #E1E1E6;
+    --bg-theader: #092D38;
+    --bg-tbody-even: hsl(192, 65%, 7%, 100%);
+    --bg-tbody-odd: hsl(195, 61%, 6%, 50%);
+    --tt-remove: #F75A68;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+html, body, input, button {
+    font-family: "Roboto", monospace;
+    color: var(--tt-aplication);
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: var(--bg-finally);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    gap: 8.6rem;
+    max-width: 100rem;
+    padding: 2rem;
+    margin: 5rem auto 0 auto;
+}
+
+/* CONFIGURAÇÕES DO CABEÇALHO */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search {
+    display: flex;
+    gap: 1rem;
+}
+
+#search > input {
+    width: 40rem;
+    padding: 1.6rem;
+    background-color: var(--bg-input);
+    border: none;
+    border-radius: .5rem;
+}
+
+#search > input::placeholder {
+    color: var(--place-holder);
+    font-size: 1.6rem;
+}
+
+#search > button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .8rem;
+
+    padding: 1.2rem 3.2rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--tt-button);
+    background-color: var(--bg-button);
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: .5rem;
+
+    cursor: pointer;
+}
+
+#search > button:hover {
+    filter: brightness(120%);
+}
+
+.ph {
+    font-size: 2.4rem;
+}
+
+
+/* CONFIGURAÇÕES DA TABELA */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table thead th{
+    text-align: left;
+    font-size: 2.0rem;
+    font-weight: bold;
+
+    padding: 1.6rem 4rem;
+    background-color: var(--bg-theader);
+}
+
+table thead th:first-child {
+    border-top-left-radius: 1.2rem;
+}
+
+table thead th:last-child {
+    border-top-right-radius: 1.2rem;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: var(--bg-tbody-odd);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: var(--bg-tbody-even);
+}
+.user > img {
+    width: 5rem;
+    height: 5rem;
+}
