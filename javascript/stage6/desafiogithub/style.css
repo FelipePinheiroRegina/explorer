@@ -109,9 +109,43 @@ header {
 
 /* CONFIGURAÇÕES DA TABELA */
 
+.nullfavorites {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+}
+
+main {
+    position: relative;
+
+    height: 36.9rem;
+    overflow-y: auto;
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+    background-color: var(--bg-input);
+}
+
+main::-webkit-scrollbar{
+    background-color: #000000;
+    width: 6px;
+
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #4A808C;
+    border-radius: 10rem;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
+    
+}
+
+table thead tr {
+    position: sticky;
+    top: 0;
 }
 
 table thead th{
@@ -138,7 +172,43 @@ table tbody tr:nth-child(odd) {
 table tbody tr:nth-child(even) {
     background-color: var(--bg-tbody-even);
 }
+
+table tbody td {
+    padding: 2.4rem 4rem;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.nameLinks {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.nameLinks > a {
+    text-decoration: none;
+    color: var(--tt-aplication);
+}
+
+.nameLinks > a::before {
+    content: '/';
+}
+
 .user > img {
-    width: 5rem;
-    height: 5rem;
+    width: 5.6rem;
+    height: 5.6rem;
+}
+
+.repositories, .followers, .remove {
+    font-weight: bold;
+}
+
+.remove {
+    color: var(--tt-remove);
+    cursor: pointer;
 }
