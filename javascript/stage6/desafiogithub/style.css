@@ -108,13 +108,25 @@ header {
 
 
 /* CONFIGURAÇÕES DA TABELA */
+html.haveFavorite .nullfavorites {
+    display: none;
+}
 
 .nullfavorites {
     position: absolute;
     inset: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+}
+
+.nullfavorites > img {
+    width: 10rem;
+}
+
+.nullfavorites > h1 {
+    color: #4E5455;
 }
 
 main {
@@ -124,6 +136,8 @@ main {
     overflow-y: auto;
     box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
     background-color: var(--bg-input);
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
 }
 
 main::-webkit-scrollbar{
@@ -140,7 +154,6 @@ main::-webkit-scrollbar-thumb {
 table {
     border-collapse: collapse;
     width: 100%;
-    
 }
 
 table thead tr {
@@ -202,6 +215,7 @@ table tbody td {
 .user > img {
     width: 5.6rem;
     height: 5.6rem;
+    border-radius: 50%;
 }
 
 .repositories, .followers, .remove {
