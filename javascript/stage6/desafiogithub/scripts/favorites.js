@@ -1,17 +1,38 @@
+export class comunicationApiGithubUsers {
+    static search(username){
+        const endpoint = `https://api.github.com/users/${username}`
+        
+        return fetch(endpoint)
+        .then(data => data.json())
+        .then(( {login, name, public_repos, followers} ) => ( {
+            login,
+            name,
+            public_repos,
+            followers
+        } ))
+    } 
+    
+    
+}
+
 export class Favorites {
     constructor(root) {
         this.root = document.querySelector(root)
-
         this.load()
+
+        comunicationApiGithubUsers.search('MaykBrito').then(user => {console.log(user)})
     }
 
     load() {
-        this.entries = [{
-            "login": "RichardPinheiro",
-            "name": "Richard Pinheiro",
-            "public_repos": 76,
-            "followers": 1200
-        }]
+           this.entries = JSON.parse(localStorage.getItem('@github-favoritesVersion2:')) || []
+
+    }
+
+    delete(user) {
+        const filterEntries = this.entries.filter(entry => entry.login != user.login)
+
+        this.entries = filterEntries
+        this.update()
     }
 }
 
@@ -39,6 +60,14 @@ export class FavoritesView extends Favorites{
             row.querySelector('.repositories').textContent = user.public_repos
 
             row.querySelector('.followers').textContent = user.followers
+
+            row.querySelector('.remove').onclick = () => {
+                const isOk = confirm('Deseja excluir esse usuário da sua lista de favoritos?')
+
+                if(isOk){
+                    this.delete(user)
+                }
+            }
 
             this.tbody.append(row)
         })
