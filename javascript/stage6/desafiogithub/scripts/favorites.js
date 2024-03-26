@@ -29,6 +29,7 @@ export class Favorites {
             }
 
             this.entries = [user, ...this.entries]
+            this.existUserFavorite()
             this.update()
             this.save()
 
@@ -49,6 +50,7 @@ export class Favorites {
         this.entries = filterEntries
         this.update()
         this.save()
+        this.existUserFavorite()
     }
 }
 
@@ -60,6 +62,7 @@ export class FavoritesView extends Favorites{
        
         this.update() 
         this.onadd()
+        this.existUserFavorite()
     }
 
     onadd() {
@@ -72,6 +75,7 @@ export class FavoritesView extends Favorites{
     }
 
     update() {
+        
         this.removeAllTr()
 
         this.entries.forEach(user => {
@@ -130,5 +134,14 @@ export class FavoritesView extends Favorites{
         this.tbody.querySelectorAll('tr').forEach(tr => {
             tr.remove()
         })
+    }
+
+    existUserFavorite() {
+        if(this.entries == 0){
+            document.documentElement.classList.remove('haveFavorite')
+        } 
+        else {
+            document.documentElement.classList.add('haveFavorite')
+        } 
     }
 }
