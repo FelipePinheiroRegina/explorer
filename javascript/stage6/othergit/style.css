@@ -7,6 +7,10 @@
 
 :root {
     font-size: 62.5%;
+
+    /* FONTS */
+    --title: "Bebas Neue", sans-serif;
+    --text: "Abel", sans-serif;
 }
 
 .sr-only {
@@ -21,11 +25,6 @@
     border-width: 0;
 }
 
-body > * {
-    border: 1px solid black;
-    
-}
-
 body {
     display: grid;
     height: 100vh;
@@ -38,19 +37,36 @@ body {
 }
 
 main {
-    display: grid;
-    overflow-y: scroll;
+    max-height: 38rem;
     max-width: 60rem;
-    max-height: 30rem;
-    place-self: center;
+    margin: 3rem auto;
+    overflow-y: scroll;
     background-color: rgba(0, 0, 0, 0);
+    
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.13);
+    border-radius: .5rem;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+    height: auto;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: yellow;
+    border-radius: 10px;
+}
+
+header, footer, thead th {
+    background-color: rgb(49, 49, 49);
 }
 
 #search {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+   justify-content: center;
 }
 
 #search i, #aboutInput > * {
@@ -95,9 +111,98 @@ main {
 
 #aboutInput button:hover {
     background-color: yellow;
+    transition-duration: .2s;
 }
 
 #aboutInput button > i {
     font-size: 2rem;
     font-weight: bold;
+}
+
+table {
+    width: 100%;
+    
+    background-color: rgba(49, 49, 49, 0.562);
+    border-collapse: collapse;
+
+    font-family: var(--text);
+}
+
+table thead {
+    position: sticky;
+    top: 0;
+}
+
+table thead th {
+    text-align: left;
+    color: yellow;
+   
+    font-size: 2rem;
+    font-family: var(--title);
+    padding: 1rem 2rem; 
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgb(49, 49, 49);
+}
+
+
+
+table tbody td {
+    padding: 1rem 2rem;
+    color: white;
+}
+
+.user {
+    display: flex;
+    gap: 1.6rem;
+}
+
+.user > img {
+    width: 5rem;
+    
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.link a {
+    color: white;
+    text-decoration: none;
+}
+
+.link a::before {
+    content: '/';
+}
+
+.remove > i {
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(253, 87, 87);
+
+    
+}
+
+.remove > i:hover {
+    color: red;
+    transition-duration: .2s;
+}
+
+footer {
+    display: grid;
+    place-content: center;
+}
+
+footer p {
+    color: white;
+    font-family: var(--text);
+}
+
+footer a {
+    color: yellow;
 }
