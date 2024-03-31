@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body > * {
+    border: 1px solid black;
+    
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 80% 1fr;
+
+    background-image: url('assets/gitbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+main {
+    display: grid;
+    overflow-y: scroll;
+    max-width: 60rem;
+    max-height: 30rem;
+    place-self: center;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#search i, #aboutInput > * {
+    padding: 1rem;
+}
+
+#search > i {
+    font-size: 5rem;
+}
+
+#aboutInput label {
+    position: absolute;
+}
+
+#aboutInput {
+    position: relative;
+    display: flex;
+    gap: 1.6rem;
+}
+
+#aboutInput input {
+    flex: 1;
+    width: 30rem;
+
+    border: transparent;
+    border-radius: .5rem;
+    background-color: rgb(58, 58, 56);
+}
+
+#aboutInput input:focus {
+    outline: 2px solid rgb(170, 170, 5)
+}
+
+#aboutInput button {
+    position: relative;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    background-color: rgb(170, 170, 5);
+}
+
+#aboutInput button:hover {
+    background-color: yellow;
+}
+
+#aboutInput button > i {
+    font-size: 2rem;
+    font-weight: bold;
+}
