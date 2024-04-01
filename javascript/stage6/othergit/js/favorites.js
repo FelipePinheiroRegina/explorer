@@ -1,13 +1,65 @@
 export class githubUsers {
-   
+   static search(userlogin) {
+        const endpoint = `https://api.github.com/users/${userlogin}`
+
+        return fetch(endpoint)
+        .then(datas => datas.json())
+        .then(({login, name, public_repos, followers}) => ({
+            login,
+            name,
+            public_repos,
+            followers
+        }))
+       
+   }
 }
 
 export class FavoritesDatas {
     constructor(bodyApp) {
         this.bodyApp = document.querySelector(bodyApp)
         
+        this.load()
     }
 
+    load() {
+        this.ArrayOfTheUser = JSON.parse(localStorage.getItem('@github-users:')) || []
+        
+    }
+
+    save() {
+        localStorage.setItem('@github-users:', JSON.stringify(this.ArrayOfTheUser))
+    }
+
+    delete(userlogin) {
+        const filterUserArray = this.ArrayOfTheUser.filter(OldArray => OldArray.login !== userlogin)
+
+        this.ArrayOfTheUser = filterUserArray
+        this.update()
+        this.save()
+    }
+
+    async add(userlogin) {
+        try {
+            const userExist = this.ArrayOfTheUser.find(old => old.login === userlogin)
+
+            if(userExist) {
+                throw new Error('Usuário já cadastrado!')
+            }
+            
+            const newUser = await githubUsers.search(userlogin)
+            
+            if(newUser.login === undefined) {
+                throw new Error('Usuário não encontrado!')
+            }
+    
+            console.log(newUser)
+            this.ArrayOfTheUser = [newUser, ...this.ArrayOfTheUser]
+            this.update()
+            this.save()
+        } catch(error) {
+            alert(error.message)
+        } 
+    }
 }
 
 export class FavoritesView extends FavoritesDatas{
@@ -16,8 +68,8 @@ export class FavoritesView extends FavoritesDatas{
 
         this.tbody = this.bodyApp.querySelector('table tbody')
         
-        this.load()
         this.update()
+        this.clickAdd()
     }
 
     update() {
@@ -36,21 +88,22 @@ export class FavoritesView extends FavoritesDatas{
             row.querySelector('.repositories').textContent = `${user.public_repos}`
 
             row.querySelector('.followers').textContent = `${user.followers}`
-            console.log(row)
+
+            row.querySelector('.remove').onclick = () => {
+                this.delete(user.login)
+            }
 
             this.tbody.append(row)
         })
     }
 
-    load() {
-        this.ArrayOfTheUser = [
-            {
-                "login": "RichardPinheiro",
-                "name": "Richard Pinheiro",
-                "public_repos": 76,
-                "followers": 43,
-            }
-        ]
+    clickAdd() {
+        const addButton = this.bodyApp.querySelector('#add').onclick = () => {
+            const { value } = this.bodyApp.querySelector('#idsearch')
+            
+            this.add(value)
+       }
+       
     }
 
     createRow() {
