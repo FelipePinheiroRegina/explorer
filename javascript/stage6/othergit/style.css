@@ -67,6 +67,8 @@ header, footer, thead th {
     flex-direction: row;
     align-items: center;
    justify-content: center;
+
+   animation: move 1.2s;
 }
 
 #search i, #aboutInput > * {
@@ -90,14 +92,24 @@ header, footer, thead th {
 #aboutInput input {
     flex: 1;
     width: 30rem;
-
+    color: white;
     border: transparent;
     border-radius: .5rem;
     background-color: rgb(58, 58, 56);
+
+    font-family: var(--text);
+    font-weight: bold;
+    color: white;
 }
 
 #aboutInput input:focus {
     outline: 2px solid rgb(170, 170, 5)
+}
+
+#aboutInput input::placeholder {
+    font-family: var(--text);
+    font-weight: bold;
+    color: white;
 }
 
 #aboutInput button {
@@ -196,6 +208,8 @@ table tbody td {
 footer {
     display: grid;
     place-content: center;
+
+    animation: movefo 1.2s;
 }
 
 footer p {
@@ -205,4 +219,16 @@ footer p {
 
 footer a {
     color: yellow;
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes movefo {
+    0% {
+        transform: translateY(100%);
+    }
 }
