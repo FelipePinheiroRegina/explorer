@@ -1,8 +1,11 @@
 require('express-async-errors')
 const appError = require('./utils/appError')
+const migrationsRun = require('./database/sqlite/migrations')
 
 const express = require('express')
 const routes = require('./routes')
+
+migrationsRun()
 
 const app = express()
 // When go treat data's JSON, need speak to node. syntax below
