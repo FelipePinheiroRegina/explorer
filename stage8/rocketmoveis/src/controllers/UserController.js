@@ -1,6 +1,8 @@
 class UserController{
     create(req, res){
-        res.send('Olá, Mundo!')
+        const { name, email, password } = req.body
+
+        return res.json({name, email, password})
     }
 }
 
