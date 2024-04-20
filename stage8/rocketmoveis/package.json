@@ -5,14 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server.js",
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "migrate": "npx knex migrate:latest"
   },
   "keywords": [],
   "author": "Felipe Pinheiro",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.19.2",
     "express-async-errors": "^3.1.1",
+    "knex": "^3.1.0",
+    "npx": "^10.2.2",
     "path": "^0.12.7",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
