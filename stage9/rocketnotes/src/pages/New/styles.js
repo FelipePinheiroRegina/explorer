@@ -10,6 +10,18 @@ export const Container = styled.div`
     "header"
     "content"
     ;
+
+    > main {    
+        grid-area: 'content';
+
+        overflow-y: auto;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 `
 
 export const Form = styled.form`
@@ -26,7 +38,7 @@ export const Form = styled.form`
         a {
             font-size: 20px;
 
-            color: ${({ theme }) => theme.COLORS.GRAY_100};
+            color: ${({ theme }) => theme.COLORS.ORANGE};
         }
     }
 `

@@ -9,14 +9,14 @@ import { Section } from '../../components/Section'
 import { Note } from '../../components/Note'
 
 
-export default function Home(){
+export function Home(){
     return (
         <Container>
             <Brand>
                 <h1>Rocketnotes</h1>
             </Brand>
 
-            <Header/>
+            <Header to='/profile'/>
 
             <Menu>
                 <li><ButtonText title='All' isActive/></li>
@@ -40,7 +40,7 @@ export default function Home(){
                 </Section>
             </Content>
 
-            <NewNote>
+            <NewNote to='/new'>
                 <FiPlus/>
                 Criar nota
             </NewNote>

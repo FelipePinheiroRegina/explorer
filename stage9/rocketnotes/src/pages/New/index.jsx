@@ -4,6 +4,8 @@ import { Input } from "../../components/Input"
 import { TextArea } from "../../components/TextArea"
 import { NoteItem } from "../../components/NoteItem"
 import { Section } from "../../components/Section"
+import { Button } from "../../components/Button"
+import { Link } from "react-router-dom"
 
 export function New() {
     return (
@@ -14,7 +16,7 @@ export function New() {
                 <Form>
                     <header>
                         <h1>Create Note</h1>
-                        <a href="/">Go back</a>
+                        <Link to='/'> Go back </Link>
                     </header>
 
                     <Input placeholder='Title'/>
@@ -24,6 +26,15 @@ export function New() {
                         <NoteItem value="https://www.rocketseat.com.br"/>
                         <NoteItem isNew />
                     </Section>
+
+                    <Section title='Markers'>
+                        <div className="tags">
+                            <NoteItem value="React"/>
+                            <NoteItem isNew />
+                        </div>
+                    </Section>
+
+                    <Button title='Save'/>
                 </Form>
             </main>
         </Container>
