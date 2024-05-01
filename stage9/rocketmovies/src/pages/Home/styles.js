@@ -63,7 +63,7 @@ export const Head = styled.div`
         font-weight: bold;
         cursor: pointer;
 
-        color: ${({ theme }) => theme.COLORS.BLACK_BUTTON}; 
+        color: ${({ theme }) => theme.COLORS.BLACK_PLUS}; 
         background-color: ${({ theme }) => theme.COLORS.RED}; 
     }
 `
