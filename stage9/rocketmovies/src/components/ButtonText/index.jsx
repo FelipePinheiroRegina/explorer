@@ -1,8 +1,9 @@
 import { Container } from "./styles"
 
-export function ButtonText({title}) {
+export function ButtonText({icon: Icon, title}) {
     return (
         <Container>
+            {Icon && <Icon size={20}/>}
             {title}
         </Container>
     )

@@ -1,8 +1,11 @@
 import styled from "styled-components"
 
 export const Container = styled.span`
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
     cursor: pointer;
     border: none;
-    background-color: transparent;
     color: ${({ theme }) => theme.COLORS.RED};
 `

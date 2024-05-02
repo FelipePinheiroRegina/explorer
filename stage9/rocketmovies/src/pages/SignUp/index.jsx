@@ -4,7 +4,7 @@ import { Container, Form, Background } from "./styles"
 
 import { Input } from "../../components/Input"
 import { Button} from "../../components/Button"
-import { ButtonText} from "../../components/ButtonText"
+import { ButtonText } from "../../components/ButtonText"
 
 export function SignUp() {
     return (
