@@ -3,6 +3,7 @@ import { FiSearch } from "react-icons/fi"
 import { Container, Avatar } from "./styles"
 
 import { Input } from "../Input"
+import { Link } from "react-router-dom"
 
 export function Header() {
     return (
@@ -17,7 +18,9 @@ export function Header() {
                     <a href="#"> Log out</a>
                 </div>
 
-                <img src="https://www.github.com/FelipePinheiroRegina.png" alt="Photo User" />
+                <Link to="/profile">
+                    <img src="https://www.github.com/FelipePinheiroRegina.png" alt="Photo User"/>
+                </Link>
             </Avatar>
         </Container>
     )  

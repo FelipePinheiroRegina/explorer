@@ -48,8 +48,12 @@ export const Form = styled.div`
         margin-bottom: 42px;
     }
 
-    > span {
-        text-align: center;
+    a {
+        text-decoration: none;
+        
+        span {
+            text-align: center;
+        }
     }
 `
 

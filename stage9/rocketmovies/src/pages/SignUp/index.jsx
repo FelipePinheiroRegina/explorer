@@ -6,6 +6,8 @@ import { Input } from "../../components/Input"
 import { Button} from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 
+import { Link } from "react-router-dom"
+
 export function SignUp() {
     return (
         <Container>
@@ -37,7 +39,9 @@ export function SignUp() {
 
                 <Button title='Cadaster'/>
 
-                <ButtonText title="You already have an account? Sign In"/>
+                <Link to="/">
+                    <ButtonText title="You already have an account? Sign In"/>
+                </Link>
             </Form>
         </Container>
     )   

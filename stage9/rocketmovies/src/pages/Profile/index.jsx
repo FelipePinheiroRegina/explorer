@@ -6,11 +6,15 @@ import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 
+import { Link } from "react-router-dom"
+
 export function Profile() {
     return (
         <Container>
             <StyleRow>
-                <ButtonText title="Go back" icon={FiArrowLeft}/>
+                <Link to="/">
+                    <ButtonText title="Go back" icon={FiArrowLeft}/>
+                </Link>
             </StyleRow>
 
             <Form>
@@ -42,7 +46,7 @@ export function Profile() {
 
                  <Input 
                     type = "password"
-                    placeholder="Password" 
+                    placeholder="New password" 
                     icon={FiLock}
                 />
 

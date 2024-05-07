@@ -5,6 +5,7 @@ export const Container = styled.span`
     gap: 8px;
     align-items: center;
 
+    background-color: transparent;
     cursor: pointer;
     border: none;
     color: ${({ theme }) => theme.COLORS.RED};

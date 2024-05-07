@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom"
 
 export const Container = styled.div`
     width: 100%;
@@ -48,6 +49,10 @@ export const Head = styled.div`
         font-weight: 400;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     button {
         display: flex;
         align-items: center;
@@ -70,7 +75,9 @@ export const Head = styled.div`
 
 // Settings Movie Notes 
 
-export const MovieNote = styled.div`
+export const MovieNote = styled(Link)`
+    text-decoration: none;
+    
     display: flex;
     flex-direction: column;
     gap: 15px;

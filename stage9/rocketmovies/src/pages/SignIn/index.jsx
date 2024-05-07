@@ -6,6 +6,8 @@ import { Input } from "../../components/Input"
 import { Button} from "../../components/Button"
 import { ButtonText} from "../../components/ButtonText"
 
+import { Link } from "react-router-dom"
+
 export function SignIn() {
     return (
         <Container>
@@ -29,7 +31,9 @@ export function SignIn() {
 
                 <Button title='Enter'/>
 
-                <ButtonText title="Don't you have an account? Sign Up"/>
+                <Link to="/register">
+                    <ButtonText title="Don't you have an account? Sign Up"/>
+                </Link>
             </Form>
 
             <Background/>

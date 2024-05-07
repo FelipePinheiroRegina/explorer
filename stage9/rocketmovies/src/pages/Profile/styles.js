@@ -13,9 +13,13 @@ export const StyleRow  = styled.div`
 
     align-items: center;
     
-    > span {
-        margin-left: 80px; 
+    a {
+        text-decoration: none;
+        span {
+            margin-left: 80px; 
+        }
     }
+    
 `
 export const Form  = styled.div`
     width: 400px;

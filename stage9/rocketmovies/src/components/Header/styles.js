@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
+import { Link } from "react-router-dom"
+
 export const Container = styled.header`
+    grid-area: header;
+
     display: flex;
     align-items: center;
     gap: 64px;
@@ -39,8 +43,9 @@ export const Avatar = styled.div`
         }
     }
 
-    > img {
+    img {
         height: 64px;
         width: 64px;
+        cursor: pointer;
     }
 `
