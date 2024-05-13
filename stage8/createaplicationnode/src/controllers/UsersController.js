@@ -5,7 +5,7 @@ const { hash, compare } = require('bcryptjs')
 
 class UsersController {
     async create(request, response) {
-        const { name, email, pass } = request.body
+        const { name, email, password } = request.body
 
         const database=  await sqliteConnection()
        
@@ -15,15 +15,15 @@ class UsersController {
             throw new appError('This e-mail already exists')
         }
 
-        const hashpassword = await hash(pass, 8)
+        const hashPassword = await hash(password, 8)
 
-        await database.run('INSERT INTO users(name, email, password) VALUES(?, ?, ?)', [name, email, hashpassword])
+        await database.run('INSERT INTO users(name, email, password) VALUES(?, ?, ?)', [name, email, hashPassword])
 
         return response.status(201).json()
     }
 
     async update(request, response) {
-        const { name, email, oldpassword, newpassword} = request.body
+        const { name, email, oldPassword, newPassword} = request.body
         const user_id = request.user.id
 
         const database = await sqliteConnection()
@@ -43,18 +43,18 @@ class UsersController {
         user.name  = name ?? user.name
         user.email = email ?? user.email
 
-        if(newpassword && !oldpassword){
+        if(newPassword && !oldPassword){
             throw new appError('You need to enter your old password');
         }
 
-        if(newpassword && oldpassword){
-            const checkOldpassword = await compare(oldpassword, user.password)
+        if(newPassword && oldPassword){
+            const checkOldPassword = await compare(oldPassword, user.password)
 
-            if(!checkOldpassword){
+            if(!checkOldPassword){
                 throw new appError('Password invalid')
             }
 
-            user.password = await hash(newpassword, 8)
+            user.password = await hash(newPassword, 8)
         }
         
         await database.run(`

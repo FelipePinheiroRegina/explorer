@@ -1,14 +1,14 @@
-const { path } = require('path')
+const path = require('path')
 const multer = require('multer')
 const crypto = require('crypto')
 
 const TMP_FOLDER = path.resolve(__dirname, "..", "..", "tmp")
-const UPLOADS_FOLDER = path.resolve(__dirname, "uploads")
+const UPLOADS_FOLDER = path.resolve(TMP_FOLDER, "uploads")
 
 const MULTER = {
     storage: multer.diskStorage({
         destination: TMP_FOLDER,
-        filename(resquest, file, callback) {
+        filename(request, file, callback) {
             const fileHash = crypto.randomBytes(10).toString('hex');
             const fileName = `${fileHash}-${file.originalname}`;
 
