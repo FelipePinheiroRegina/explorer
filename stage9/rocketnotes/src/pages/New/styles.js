@@ -19,7 +19,7 @@ export const Container = styled.div`
 
     .tags {
         display: flex;
-        justify-content: space-around;
+        gap: 8px;
         flex-wrap: wrap;
     }
 `

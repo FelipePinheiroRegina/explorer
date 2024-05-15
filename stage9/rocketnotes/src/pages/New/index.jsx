@@ -8,14 +8,65 @@ import { Button } from "../../components/Button"
 import { Link } from "react-router-dom"
 
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { api } from "../../services/api"
 
 export function New() {
+    const [ title, setTitle] = useState("")
+    const [ description, setDescription ] = useState("")
+
     const [ links, setLinks ] = useState([])
     const [ newLink, setNewLink ] = useState("")
 
+    const [ tags, setTags] = useState([])
+    const [ newTag, setNewTag ] = useState("")
+
+    const navigate = new useNavigate()
+
     function handleAddLink() {
+        if(!newLink) {
+            return alert('Write in field before of add')
+        }
+
         setLinks(prevState => [...prevState, newLink])
         setNewLink("")
+    }
+
+    function handleRemoveLink(deleted) {
+        setLinks(prevState => prevState.filter(link => link !== deleted))
+    }
+
+    function handleAddTag() {
+        if(!newTag) {
+            return alert('Write in field before of add')
+        }
+
+        setTags(prevState => [...prevState, newTag])
+        setNewTag("")
+    }
+
+    function handleRemoveTag(deleted) {
+        setTags(prevState => prevState.filter(tag => tag !== deleted))
+    }
+
+    async function handleCreateNote() {
+        if(!title && !description) {
+            return alert("The fields are required")
+        }
+
+        if(links.length == 0 && tags.length == 0) {
+            return alert("The fields are required")
+        }
+
+        await api.post('/notes', {
+            title,
+            description,
+            links,
+            tags
+        })
+
+        alert('Note create successfully')
+        navigate('/')
     }
 
     return (
@@ -29,8 +80,14 @@ export function New() {
                         <Link to='/'> Go back </Link>
                     </header>
 
-                    <Input placeholder='Title'/>
-                    <TextArea placeholder='Description'/>
+                    <Input 
+                        placeholder='Title'
+                        onChange={e => setTitle(e.target.value)}
+                    />
+                    <TextArea 
+                        placeholder='Description'
+                        onChange={e => setDescription(e.target.value)}
+                    />
 
                     <Section title='Utils links'>
                         {
@@ -38,7 +95,7 @@ export function New() {
                                 <NoteItem
                                     key={String(index)}
                                     value={link}
-                                    onClick={() => { }}
+                                    onClick={() => handleRemoveLink(link)}
                                 /> 
                             ))
                         }
@@ -54,12 +111,26 @@ export function New() {
 
                     <Section title='Markers'>
                         <div className="tags">
-                            <NoteItem value="React"/>
-                            <NoteItem isNew />
+                            {
+                               tags.map((tag, index) => (
+                                    <NoteItem
+                                        key={String(index)}
+                                        value={tag}
+                                        onClick={() => handleRemoveTag(tag)}
+                                    />
+                                ))
+                            }
+                            <NoteItem 
+                                isNew 
+                                placeholder="New Tag"
+                                value={newTag}
+                                onChange={e => setNewTag(e.target.value)}
+                                onClick={handleAddTag}
+                            />
                         </div>
                     </Section>
 
-                    <Button title='Save'/>
+                    <Button title='Save' onClick={handleCreateNote}/>
                 </Form>
             </main>
         </Container>
