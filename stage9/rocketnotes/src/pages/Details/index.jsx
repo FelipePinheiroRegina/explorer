@@ -1,3 +1,8 @@
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { api } from '../../services/api'
+
+
 import { Container, Links, Content } from './styles'
 import { Button } from '../../components/Button'
 import { ButtonText } from '../../components/ButtonText'
@@ -5,33 +10,66 @@ import { Header } from '../../components/Header'
 import { Section } from '../../components/Section'
 import { Tag } from '../../components/Tag'
 
+import { Link } from 'react-router-dom'
+
 export function Details(){
+  const [ data, setData ] = useState(null)
+  const { id } = useParams()
+
+  useEffect(() => {
+    async function fetchDetails() {
+      const response = await api.get(`/notes/${id}`)
+      setData(response.data)
+    }
+
+    fetchDetails()
+  }, [])
+
   return(
    <Container>
       <Header />
-      <main>
+      { data &&
+        <main>
         <Content>
           <ButtonText title='Delete Note'/>
           
-          <h1>HELLO WORLD!</h1>
+          <h1>{data.title}</h1>
 
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad sint at hic quis culpa consequatur. Dicta deleniti impedit tenetur expedita at, deserunt in aperiam provident voluptate illo quas obcaecati. Voluptatum.</p>
+          <p>{data.description}</p>
           
           <Section title="Utils links">
             <Links>
-              <li><a href="#">https://rocketseat.com.br/</a></li>
-              <li><a href="#">https://rocketseat.com.br/</a></li>
-            </Links>
+                {
+                  data.links.map(link => (
+                    <li key={String(link.id)}>
+                      <a href={link.url} target='_blank'>
+                          {link.url}                      
+                      </a>
+                    </li>
+                  ))
+                }
+            </Links>                   
           </Section>
 
           <Section title="Markers">
-            <Tag title='Node.js'/>
-            <Tag title='Express'/>
+            {
+              data.tags.map(tag => (
+                <Tag 
+                  key={String(tag.id)}
+                  title={tag.name}
+                />
+              ))
+            }
+            
+            
           </Section>
 
-          <Button title="Back"/>
+          <Link to='/'>
+            <Button title="Back"/>
+          </Link>
         </Content>
       </main>
+      }
    </Container>
   )
 }
