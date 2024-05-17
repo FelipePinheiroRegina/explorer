@@ -7,7 +7,8 @@ import { Container, Form, Background } from './styles'
 
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
-import { Link, useNavigate } from "react-router-dom"
+import { ButtonText } from "../../components/ButtonText"
+import { useNavigate } from "react-router-dom"
 
 export function SignUp() { 
     const [name, setName] = useState("")
@@ -15,6 +16,10 @@ export function SignUp() {
     const [password, setPassword] = useState("")
 
     const navigate = useNavigate()
+
+    function handleBack() {
+        navigate(-1)
+    }
 
     function handleSignUp() {
         if(!name || !email || !password) {
@@ -24,7 +29,7 @@ export function SignUp() {
         api.post('/users', { name, email, password })
         .then(() => {
             alert('User successfully registered')
-            navigate('/')
+            navigate(-1)
         })
         .catch(error => {
             if(error.response){
@@ -69,9 +74,10 @@ export function SignUp() {
 
                 <Button title='Cadaster'onClick={handleSignUp}/>
 
-                <Link to='/'>
-                    Already have an account? Sign In
-                </Link>
+                <ButtonText 
+                    title="Already have an account? Sign In" onClick={handleBack}
+                > 
+                </ButtonText>
             </Form>
         </Container>
     )

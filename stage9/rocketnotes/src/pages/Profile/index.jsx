@@ -9,7 +9,7 @@ import { api } from "../../services/api"
 import { Container, Form, Avatar } from "./styles";
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Profile() {
     const { user, updateProfile } = useAuth()
@@ -25,15 +25,24 @@ export function Profile() {
     const [ oldPassword, setOldPassword ] = useState('')
     const [ newPassword, setNewPassword ] = useState('')
     
+    const navigate = new useNavigate()
+
+    function handleBack() {
+        navigate(-1)
+    }
+
     async function handleUpdate() {
-        const user = {
+        const updated = {
             name,
             email,
             oldPassword,
             newPassword
         }
 
-        await updateProfile({ user, avatarFile })
+        const UserUpdated = Object.assign(user, updated)
+
+        await updateProfile({ user: UserUpdated, avatarFile })
+        navigate(-1)
     }
 
     async function handleChangeAvatar(event) {
@@ -47,9 +56,12 @@ export function Profile() {
     return (
         <Container>
             <header>
-                <Link to='/'>
+                <button 
+                    type="button"
+                    onClick={handleBack}
+                >
                     <FiArrowLeft/>
-                </Link>
+                </button>
             </header>
 
             <Form>

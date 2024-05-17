@@ -63,7 +63,6 @@ class NotesController{
 
         if(tags) {
             const filterTags = tags.split(',').map(tag => tag.trim())
-            console.log(filterTags)
 
             notes = await knex('tags')
             .select([

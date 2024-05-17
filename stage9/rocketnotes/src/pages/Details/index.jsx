@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { api } from '../../services/api'
 
 
@@ -10,11 +10,20 @@ import { Header } from '../../components/Header'
 import { Section } from '../../components/Section'
 import { Tag } from '../../components/Tag'
 
-import { Link } from 'react-router-dom'
-
 export function Details(){
   const [ data, setData ] = useState(null)
   const { id } = useParams()
+
+  const navigate = useNavigate()
+
+  async function handleRemove() {
+    const isOk = window.confirm('want to delete the note?')
+
+    if(isOk) {
+      await api.delete(`/notes/${id}`)
+      navigate(-1)
+    }
+  }
 
   useEffect(() => {
     async function fetchDetails() {
@@ -31,7 +40,10 @@ export function Details(){
       { data &&
         <main>
         <Content>
-          <ButtonText title='Delete Note'/>
+          <ButtonText 
+            title='Delete Note'
+            onClick={handleRemove}
+          />
           
           <h1>{data.title}</h1>
 
