@@ -3,9 +3,19 @@ import { FiSearch } from "react-icons/fi"
 import { Container, Avatar } from "./styles"
 
 import { Input } from "../Input"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useAuth } from "../../hooks/auth"
 
 export function Header() {
+    const { logOut, user } = useAuth()
+
+    const navigate = useNavigate()
+
+    function handleLogOut() {
+        navigate('/')
+        logOut()
+    }
+
     return (
         <Container>
             <h1>Rocket Movies</h1>
@@ -14,12 +24,17 @@ export function Header() {
 
             <Avatar>
                 <div>
-                    <strong>Felipe Pinheiro</strong>
-                    <a href="#"> Log out</a>
+                    <strong>{user.name}</strong>
+                    <button
+                        type="button"
+                        onClick={handleLogOut}
+                    >
+                        Log out
+                    </button> 
                 </div>
 
                 <Link to="/profile">
-                    <img src="https://www.github.com/FelipePinheiroRegina.png" alt="Photo User"/>
+                    <img src={user.avatar} alt={user.name}/>
                 </Link>
             </Avatar>
         </Container>

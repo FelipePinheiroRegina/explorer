@@ -35,7 +35,10 @@ export const Avatar = styled.div`
             font-size: 14px;
         }
 
-        a {
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
             font-size: 14px;
             color: ${({ theme }) => theme.COLORS.GRAY};
             text-decoration: none;

@@ -6,9 +6,35 @@ import { Input } from "../../components/Input"
 import { Button} from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useState } from "react"
+import { api } from "../../services/api"
 
 export function SignUp() {
+    const [ name, setName ] = useState('')
+    const [ email, setEmail ] = useState('')
+    const [ password, setPassword ] = useState('')
+
+    const navigate = useNavigate()
+
+    function handleCreate() {
+        if(!name || !email || !password) {
+            return alert('Fields required')
+        }
+
+        api.post('/users', {name, email, password})
+            .then(() => {
+                alert('User registered successfully')
+                navigate('/')
+            }).catch (error => {
+                if(error.response) {
+                    return alert(error.response.data.message)
+                } else {
+                    return alert('Unable to register!')
+                }
+            })
+    }
+
     return (
         <Container>
             <Background/>
@@ -23,21 +49,24 @@ export function SignUp() {
                     type = 'text'
                     placeholder='Name' 
                     icon={FiUser}
+                    onChange={e => setName(e.target.value)}
                 />
 
                 <Input 
                     type = 'text'
                     placeholder='Email' 
                     icon={FiMail}
+                    onChange={e => setEmail(e.target.value)}
                 />
 
                 <Input 
                     type = 'password'
                     placeholder='Password' 
                     icon={FiLock}
+                    onChange={e => setPassword(e.target.value)}
                 />
 
-                <Button title='Cadaster'/>
+                <Button title='Cadaster' onClick={handleCreate}/>
 
                 <Link to="/">
                     <ButtonText title="You already have an account? Sign In"/>

@@ -1,6 +1,7 @@
 const appError = require("../utils/appError")
 const sqliteConnection = require('../database/sqlite')
 const { hash, compare } = require('bcryptjs')
+const DiskStorage = require("../providers/DiskStorage")
 
 class UserController{
     async create(req, res){
@@ -23,8 +24,8 @@ class UserController{
     }
 
     async update(req, res){
-        const { name, email, oldpassword, newpassword } = req.body
-        const { user_id } = req.params
+        const { name, email, oldPassword, newPassword } = req.body
+        const user_id = req.user.id
 
         const database = await sqliteConnection()
         const user = await database.get("SELECT * FROM users WHERE id = (?)", [ user_id ])
@@ -42,17 +43,17 @@ class UserController{
         user.name = name   ?? user.name
         user.email = email ?? user.email
 
-        if(!oldpassword){
+        if(!oldPassword){
             throw new appError('The oldpassword is required')
         }
 
-        const checkedOldPassword = await compare(oldpassword, user.password)
+        const checkedOldPassword = await compare(oldPassword, user.password)
 
         if(!checkedOldPassword){
             throw new appError('Oldpassword invalid')
         }
 
-        user.password =  await hash(newpassword, 8) 
+        user.password =  await hash(newPassword, 8) 
 
         await database.run(`
             UPDATE users SET 
@@ -64,6 +65,30 @@ class UserController{
             `, [user.name, user.email, user.password, user_id])
 
         return res.status(201).json({msg: `User ${user.name} updated with success!`})
+    }
+
+    async avatar(req, res) {
+        const user_id = req.user.id
+        const avatarFilename = req.file.filename
+        const diskStorage = new DiskStorage()
+        const database = await sqliteConnection()
+
+        const user = await database.get("SELECT * FROM users WHERE id = (?)", [ user_id ])
+
+        if(!user) {
+            throw new appError('User not found')
+        }
+
+        if(user.avatar) {
+            await diskStorage.deleteFile(user.avatar)
+        }
+
+        const fileName = await diskStorage.saveFile(avatarFilename)
+        user.avatar = fileName
+        
+        await database.run("UPDATE users SET avatar = ? WHERE id = (?)", [user.avatar, user_id])
+
+        return res.json(user)
     }
 }
 

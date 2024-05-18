@@ -7,8 +7,14 @@ import { Button } from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 
 import { Link } from "react-router-dom"
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg"
+import { useAuth } from "../../hooks/auth"
 
 export function Profile() {
+    const { user, updateProfile } = useAuth()
+
+    
+    
     return (
         <Container>
             <StyleRow>

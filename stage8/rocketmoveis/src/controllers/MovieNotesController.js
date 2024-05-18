@@ -4,7 +4,7 @@ class MovieNotesController {
     async create(req, res){
         const { title, description, rating, tags } = req.body
 
-        const { user_id } = req.params
+        const user_id = req.user.id
 
         const [ movie_notes_id ] = await knex('movie_notes').insert({title, description, rating, user_id}) 
 
