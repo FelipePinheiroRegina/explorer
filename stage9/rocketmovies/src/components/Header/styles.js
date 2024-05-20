@@ -47,6 +47,7 @@ export const Avatar = styled.div`
     }
 
     img {
+        border-radius: 50%;
         height: 64px;
         width: 64px;
         cursor: pointer;

@@ -7,6 +7,8 @@ import { api } from "../services/api"
 
 function AuthProvider({children}) {
     const [ data, setData ] = useState({})
+    const [ searchResult, setSearchResult ] = useState([])
+    
 
     async function signIn({email, password}) {
         try {
@@ -27,6 +29,12 @@ function AuthProvider({children}) {
                 return alert('Unable to log')
             }
         }
+    }
+
+    async function searchTitle(title) {
+        const response = await api.get(`/movieNotes?title=${title}`)
+
+        setSearchResult(response.data)
     }
 
     async function updateProfile({user, avatarFile}) {
@@ -88,6 +96,8 @@ function AuthProvider({children}) {
                 signIn,
                 logOut,
                 updateProfile,
+                searchTitle,
+                searchResult,
                 user: data.user 
             }}>
 

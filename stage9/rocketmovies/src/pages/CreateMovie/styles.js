@@ -23,14 +23,12 @@ export const Content = styled.div`
     grid-area: content;
     margin: auto;
     width: 70%;
-
-    a {
-        text-decoration: none;
-        span:nth-child(1) {
-            margin-top: 40px;
-            margin-bottom: 24px;
-        }
+   
+    > span:nth-child(1) {
+        margin-top: 40px;
+        margin-bottom: 24px;
     }
+    
 
     > h1 {
         margin-bottom: 40px;
@@ -65,6 +63,7 @@ export const Form = styled.form`
             gap: 24px;
             padding: 16px;
             border-radius: 8px;
+            flex-wrap: wrap;
 
             background-color: ${({ theme }) => theme.COLORS.BLACK_BLACK};
         }

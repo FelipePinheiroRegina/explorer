@@ -1,15 +1,19 @@
-import { Container } from "./styles"
+import { Container, StarWrapper } from "./styles"
 
-import { FiStar } from 'react-icons/fi'
+import { IoStarOutline, IoStarSharp } from "react-icons/io5";
 
-export function Stars({size}) {
+export function Stars({size, rating, totalStars = 5}) {
     return (
         <Container>
-            <FiStar size={size}/>
-            <FiStar size={size}/>
-            <FiStar size={size}/>
-            <FiStar size={size}/>
-            <FiStar size={size}/>
+            {[...Array(totalStars)].map((_, index) => (
+                <StarWrapper key={index} size={size}>
+                    {index < rating ? (
+                        <IoStarSharp size={size} />
+                    ) : (
+                        <IoStarOutline size={size} />
+                    )}
+                </StarWrapper>
+            ))}
         </Container>
     )
 }

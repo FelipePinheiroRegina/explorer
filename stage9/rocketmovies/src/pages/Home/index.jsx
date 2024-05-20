@@ -6,9 +6,22 @@ import { Header } from "../../components/Header"
 import { Stars } from "../../components/Stars"
 import { Tags } from "../../components/Tags"
 
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { useEffect } from "react"
+import { useState } from "react"
+import { api } from "../../services/api"
+import { useAuth } from "../../hooks/auth"
 
 export function Home() {
+    const [ title, setTitle ] = useState('')
+    const { searchResult } = useAuth()
+    
+    const navigate = useNavigate()
+
+    function handleShowNote(id) {
+        navigate(`/details/${id}`)
+    }
+
     return (
         <Container>
             <Header />
@@ -23,23 +36,38 @@ export function Home() {
                         </button>
                     </Link>
                 </Head>
-
+                
                 <main>
-                    <MovieNote to="/preview">
-                        <Title>
-                            <h1>Star Wars</h1>
-                            <Stars size={12}/>
-                        </Title>
-                        
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos eius facilis officiis corporis reiciendis ducimus ut iusto modi? Maiores delectus fuga consequuntur sit perferendis consequatur itaque ipsam, temporibus et minus.</p>
+                    { searchResult &&
+                        searchResult.map(movie => (
+                            <MovieNote
+                                type="button" 
+                                key={String(movie.id)}
+                                onClick={() => handleShowNote(movie.id)}
+                            >
+                                <Title>
+                                    <h1>{movie.title}</h1>
+                                    <Stars size={20} rating={movie.rating}/>
+                                </Title>
+                                
+                                <p>{movie.description}</p>
 
-                        <Foot>
-                            <Tags title='Science fiction'/>
-                            <Tags title='Science fiction'/>
-                        </Foot>
-                        
-                    </MovieNote>
+                                <Foot>
+                                    {
+                                        movie.tags.map(tag => (
+                                            <Tags 
+                                                key={String(tag.id)}
+                                                title={tag.name}
+                                            />
+                                        ))
+                                    }
+                                </Foot>
+                            
+                            </MovieNote>
+                        ))
+                    }   
                 </main>  
+                
             </Content>
         </Container>
     )

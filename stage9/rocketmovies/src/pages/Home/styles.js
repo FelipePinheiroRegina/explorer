@@ -75,8 +75,12 @@ export const Head = styled.div`
 
 // Settings Movie Notes 
 
-export const MovieNote = styled(Link)`
+export const MovieNote = styled.button`
     text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+    text-align: left;
     
     display: flex;
     flex-direction: column;

@@ -43,17 +43,20 @@ class UserController{
         user.name = name   ?? user.name
         user.email = email ?? user.email
 
-        if(!oldPassword){
-            throw new appError('The oldpassword is required')
+        if(oldPassword && newPassword) {
+            if(!oldPassword){
+                throw new appError('The oldpassword is required')
+            }
+
+            const checkedOldPassword = await compare(oldPassword, user.password)
+
+            if(!checkedOldPassword){
+                throw new appError('Oldpassword invalid')
+            }
+
+            user.password =  await hash(newPassword, 8) 
         }
-
-        const checkedOldPassword = await compare(oldPassword, user.password)
-
-        if(!checkedOldPassword){
-            throw new appError('Oldpassword invalid')
-        }
-
-        user.password =  await hash(newPassword, 8) 
+        
 
         await database.run(`
             UPDATE users SET 
