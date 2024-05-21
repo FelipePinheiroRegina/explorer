@@ -113,4 +113,8 @@ export const Foot = styled.div`
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+
+    span {
+        background-color: ${({ theme }) => theme.COLORS.BACKGROUND};
+    }
 `

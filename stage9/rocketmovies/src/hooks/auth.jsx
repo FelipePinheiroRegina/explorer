@@ -33,7 +33,7 @@ function AuthProvider({children}) {
 
     async function searchTitle(title) {
         const response = await api.get(`/movieNotes?title=${title}`)
-
+       
         setSearchResult(response.data)
     }
 

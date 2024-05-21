@@ -32,8 +32,8 @@ export const Content = styled.div`
         span:nth-child(1) {
             margin-bottom: 24px;
         }
-    } 
-
+    }
+    
     > .details{
         display: flex;
         flex-direction: column;

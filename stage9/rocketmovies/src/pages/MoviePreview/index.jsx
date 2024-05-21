@@ -1,4 +1,4 @@
-import { FiClock } from "react-icons/fi"
+import { FiClock, FiTrash } from "react-icons/fi"
 
 import { Container, Content } from "./styles"
 
@@ -7,7 +7,7 @@ import { ButtonText } from "../../components/ButtonText"
 import { Stars } from "../../components/Stars"
 import { Tags } from "../../components/Tags"
 
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useNavigate } from "react-router-dom"
 import { useState, useEffect } from "react"
 import { api } from "../../services/api"
 import { useAuth } from "../../hooks/auth"
@@ -19,7 +19,16 @@ export function MoviePreview() {
     const [ data, setData ] = useState(null)
     const { id } = useParams()
 
+    const navigate = useNavigate()
+
     const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+
+    async function handleRemoveMovie(id) {
+        await api.delete(`/movieNotes/${id}`)
+
+        alert('Removed successfully!')
+        navigate(-1)
+    }
 
     useEffect(() => {
         async function fetchDetails() {
@@ -42,6 +51,13 @@ export function MoviePreview() {
                         <Link to="/">
                             <ButtonText title="Go back"/>
                         </Link>
+
+                        <ButtonText 
+                            title="Remove movie" 
+                            icon={ FiTrash }
+                            onClick={() => handleRemoveMovie(data.id)}
+                        />
+                        
 
                         <div className="details">
                             <div className="title">

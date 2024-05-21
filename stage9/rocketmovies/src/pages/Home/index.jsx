@@ -50,7 +50,7 @@ export function Home() {
                                     <Stars size={20} rating={movie.rating}/>
                                 </Title>
                                 
-                                <p>{movie.description}</p>
+                                <p>{movie.description.slice(0, 200) + "... Ler mais"}</p>
 
                                 <Foot>
                                     {

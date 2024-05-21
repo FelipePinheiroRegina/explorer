@@ -22,10 +22,11 @@ export function Header() {
         logOut()
     }
 
+    
     useEffect(() => {
-        searchTitle(title)
-    }, [title])
-
+        searchTitle(title)  
+    }, [title]) 
+    
     return (
         <Container>
             <h1>Rocket Movies</h1>

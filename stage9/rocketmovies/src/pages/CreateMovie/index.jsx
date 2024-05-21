@@ -58,7 +58,7 @@ export function CreateMovie() {
         setTags(prevState => prevState.filter(tag => tag !== deleted))
     }
 
-    function handleRemoveMovieNotes() {
+    function handleClearFields() {
         event.preventDefault()
         
         setTitle('')
@@ -132,9 +132,9 @@ export function CreateMovie() {
                 
                         <div className="two-buttons">
                             <button
-                                onClick={handleRemoveMovieNotes}
+                                onClick={handleClearFields}
                             >
-                                Delete movie
+                                Clear Fields
                             </button>
                             <Button 
                                 title="Save alterations"
