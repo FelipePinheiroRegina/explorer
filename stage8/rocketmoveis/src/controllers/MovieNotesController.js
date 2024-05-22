@@ -1,4 +1,5 @@
 const knex = require('../database/knex')
+const { format } = require('date-fns-tz') 
 
 class MovieNotesController {
     async create(req, res){
@@ -6,7 +7,15 @@ class MovieNotesController {
 
         const user_id = req.user.id
 
-        const [ movie_notes_id ] = await knex('movie_notes').insert({title, description, rating, user_id}) 
+        const [ movie_notes_id ] = await knex('movie_notes')
+        .insert({
+            title, 
+            description, 
+            rating, 
+            user_id,
+            "created_at": knex.raw("datetime('now', 'localtime')"),
+            "updated_at": knex.raw("datetime('now', 'localtime')"),
+        }) 
 
         const tagsInsert = tags.map(name => {
             return { 
@@ -26,7 +35,9 @@ class MovieNotesController {
 
         const movieNotes = await knex('movie_notes').where({id}).first()
         const tags = await knex('tags').where("movieNotes_id", id).orderBy('name')
-        
+       
+        movieNotes.created_at = format(new Date(movieNotes.created_at), "dd/MM/yyyy 'às' HH:mm:ss", { timeZone: 'America/Sao_Paulo' })
+
         return res.json({
             ...movieNotes,
             tags
