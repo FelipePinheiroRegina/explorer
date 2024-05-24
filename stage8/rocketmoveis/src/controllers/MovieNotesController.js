@@ -61,7 +61,6 @@ class MovieNotesController {
         if(title) {
                 movieNotes = await knex('movie_notes').where({user_id}).whereLike('title', `%${title}%`).orderBy('title')
         } else {
-            console.log('passei por aqui')
                 movieNotes = await knex('movie_notes')
                 .where({user_id})
         }
