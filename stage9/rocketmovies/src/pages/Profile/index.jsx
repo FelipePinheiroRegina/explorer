@@ -63,7 +63,7 @@ export function Profile() {
                     <input 
                         type="file" 
                         id="avatar"
-                        onClick={(event) => handleAvatarUpdate(event)} 
+                        onChange={handleAvatarUpdate} 
                     />
                 </Avatar>
 
