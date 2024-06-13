@@ -1,4 +1,18 @@
 # EXPLORER - FULL-STACK 🚀
+
+### RocketNotes
+<details>
+   <summary>BACK-END</summary>
+   <h3>ola mundo</h3>
+</details>
+
+
+|![LOGIN](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/16e31ef7-f291-4b53-94b8-3ab1fd8535d0) | ![REGISTER](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/9ae1e57b-7f95-4405-a4e1-6b3a76d21b85) |
+|----------------------------------------------------|------------------------------------------------------|
+|![PROFILE](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/a8a7fea4-a4b5-45b2-8fe3-f3c66172014e) | ![HOME](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/86b38511-4b24-4749-a4cf-eaee2997ff33)|
+|![DETAILS](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/487d774d-aa2f-4c87-b2d8-245b4360e543)|
+
+
 ### { * } GitFav
 Buscando dados em uma API do github para favoritar os perfis favoritos
 - [Repositório](https://github.com/FelipePinheiroRegina/explorer/tree/main/javascript/stage6/desafiogithub)
