@@ -3,8 +3,75 @@
 ### RocketNotes
 <details>
    <summary>BACK-END</summary>
-   <h3>ola mundo</h3>
+   <h4>
+      Tecnologias e Bibliotecas Usadas:
+   </h4>
+   
+   <p>- Node.js: Ambiente de execução para JavaScript no servidor.</p>
+   <p>- Express.js: Framework web para construir APIs.</p>
+   <p>- Knex.js: Query builder para interações com bancos de dados SQL.</p>
+   <p>- SQLite: Banco de dados leve usado no projeto.</p>
+   <p>- Multer: Middleware para upload de arquivos.</p>
+   <p>- JWT (JsonWebToken): Autenticação e geração de tokens.</p>
+   
+   <hr>
+   
+   <h4> 
+      Arquitetura:
+   </h4>
+   
+   <p>- Estrutura MVC (Model-View-Controller): O projeto segue uma arquitetura -que separa responsabilidades em controllers, models e views, embora seja focado em API, então "views" referem-se às respostas da API. </p>
+   <p>- Configuração de Banco de Dados: A configuração do banco de dados está definida no arquivo knexfile.js. </p>
+   <p>- Uploads de Arquivos: Diretório tmp/uploads para armazenamento de arquivos temporários antes de processamento. </p>
+
+   <hr>
+
+   <h4>
+      Pontos Essenciais: 
+   </h4>
+
+   <p>- Autenticação e Segurança: Uso de JWT para proteger rotas e validar usuários.</p>
+   <p>- Manutenção e Expansibilidade: Estrutura modular que facilita a manutenção e adição de novas funcionalidades.</p>
+   <p>- Middleware: Uso de middlewares para tratamento de requisições, autenticação e upload de arquivos.</p> 
 </details>
+
+<details>
+   <summary>FRONT-END</summary>
+   <h4>
+      Tecnologias e Bibliotecas Usadas:
+   </h4>
+   
+   <p>- React: Biblioteca JavaScript para construção de interfaces de usuário.</p>
+   <p>- React Router: Biblioteca para gerenciamento de rotas no React.</p>
+   <p>- Axios: Biblioteca para fazer requisições HTTP.</p>
+   <p>- Styled-components: Biblioteca para estilização de componentes.</p>
+   
+   <hr>
+   
+   <h4> 
+      Arquitetura:
+   </h4>
+   
+   <p>- Component-Based: Estrutura baseada em componentes reutilizáveis.</p>
+   <p>- Single Page Application (SPA): Aplicação de página única que melhora a experiência do usuário.</p>
+
+   <hr>
+
+   <h4>
+      Pontos Essenciais: 
+   </h4>
+
+   <p>- Gerenciamento de Estado: Uso de hooks para gerenciamento de estado local.</p>
+   <p>- Estilização: Uso de styled-components para estilos dinâmicos e reutilizáveis.</p>
+   <p>- Rotas: Gerenciamento eficiente de rotas com React Router.</p> 
+   <p>- Requisições HTTP: Axios para comunicação com a API backend.</p>
+
+   Um projeto bem estruturado utilizando tecnologias modernas tanto pro frontend quanto no backend, com foco em modularidade, manutenção e escalabilidade.
+</details>
+
+- [Projeto no ar](https://pinheironotes.netlify.app/)
+- [Repositório back-end](https://github.com/FelipePinheiroRegina/rocketnotes-backend)
+- [Repositório front-end](https://github.com/FelipePinheiroRegina/rocketnotes-frontend)
 
 
 |![LOGIN](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/16e31ef7-f291-4b53-94b8-3ab1fd8535d0) | ![REGISTER](https://github.com/FelipePinheiroRegina/explorer/assets/113048688/9ae1e57b-7f95-4405-a4e1-6b3a76d21b85) |
